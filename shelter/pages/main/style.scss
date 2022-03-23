@@ -1,0 +1,129 @@
+$pageHeight: 100%;
+$pageWidth: 1200px;
+$colorPrimary: rgba(241, 205, 179, 1);
+$colorLight: rgba(255, 255, 255, 1);
+$colorPrimaryLight: rgba(253, 220, 196, 1);
+$colorDark3xl: rgba(41, 41, 41, 1);
+
+@mixin link {
+  text-decoration: none;
+}
+@mixin margineWidth {
+  margin: 0 auto;
+  width: $pageWidth;
+}
+@mixin fontsArial($size) {
+  font: 400 $size "Arial";
+}
+@mixin fontsGeorgia($size) {
+  font: 400 $size "Georgia";
+}
+@mixin button($bckgrColor, $color) {
+  color: $color;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $bckgrColor;
+}
+
+html {
+  height: $pageHeight;
+}
+body {
+  width: 1280px;
+  margin: 0 auto;
+  height: $pageHeight;
+}
+//******************************
+//*******start screen***********
+.startScreen {
+  background: url(../../assets/images/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+    linear-gradient(0deg, #211f20, #211f20);
+}
+//*********header***************
+header {
+  height: 60px;
+  display: flex;
+  padding-top: 60px;
+  @include margineWidth();
+  justify-content: space-between;
+}
+h1 {
+  a {
+    color: $colorPrimary;
+    @include fontsGeorgia(32px);
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    text-decoration: none;
+    &:hover {
+      color: $colorLight;
+    }
+  }
+}
+.subtitle {
+  color: $colorLight;
+  @include fontsArial(13px);
+  letter-spacing: 0.1em;
+  line-height: 15px;
+  padding: 10px 0 0 4px;
+}
+nav {
+  width: 443px;
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    @include fontsArial(15px);
+  }
+  a {
+    color: rgba(205, 205, 205, 1);
+    text-decoration: none;
+    &:hover {
+      color: $colorLight;
+      border-bottom: 3px $colorPrimary solid;
+      padding-bottom: 3px;
+    }
+  }
+}
+.startScreenContent {
+  display: flex;
+  width: $pageWidth;
+  padding-top: 60px;
+  justify-content: space-between;
+  @include margineWidth();
+  div {
+    height: 322px;
+    width: 460px;
+    padding-top: 163px;
+    h2 {
+      @include fontsGeorgia(44px);
+      color: rgba(255, 255, 255, 1);
+      width: 310px;
+      line-height: 130%;
+    }
+    p {
+      @include fontsArial(15px);
+      line-height: 160%;
+      color: rgba(205, 205, 205, 1);
+      align-items: center;
+      margin: 42px 0;
+    }
+    button {
+      @include button($colorPrimary, $colorDark3xl);
+      width: 207px;
+      height: 52px;
+      @include fontsGeorgia(17px);
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      &:hover {
+        background-color: $colorPrimaryLight;
+      }
+    }
+  }
+  img {
+    width: 60%;
+  }
+}
+
+//**************************
+//*******main***************
