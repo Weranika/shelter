@@ -1,43 +1,43 @@
-$pageHeight: 100%;
-$pageWidth: 1200px;
-$colorPrimary: rgba(241, 205, 179, 1);
-$colorLight: rgba(255, 255, 255, 1);
-$colorPrimaryLight: rgba(253, 220, 196, 1);
-$colorDarkS: rgba(205, 205, 205, 1);
-$colorDark3xl: rgba(41, 41, 41, 1);
-$colorDarkL: rgba(84, 84, 84, 1);
-$colorDarkXl: rgba(76, 76, 76, 1);
+$page-height: 100%;
+$page-width: 1200px;
+$color-primary: rgba(241, 205, 179, 1);
+$color-light: rgba(255, 255, 255, 1);
+$color-primary-light: rgba(253, 220, 196, 1);
+$color-dark-s: rgba(205, 205, 205, 1);
+$color-dark-3xl: rgba(41, 41, 41, 1);
+$color-dark-l: rgba(84, 84, 84, 1);
+$color-dark-xl: rgba(76, 76, 76, 1);
 @mixin link {
   text-decoration: none;
 }
-@mixin margineWidth {
+@mixin marginWidth {
   margin: 0 auto;
-  width: $pageWidth;
+  width: $page-width;
 }
-@mixin fontsArial($size) {
+@mixin fontArial($size) {
   font: 400 $size "Arial";
 }
-@mixin fontsGeorgia($size) {
+@mixin fontGeorgia($size) {
   font: 400 $size "Georgia";
 }
-@mixin button($bckgrColor, $color) {
+@mixin button($bckgr-color, $color) {
   color: $color;
   align-items: center;
   border-radius: 100px;
-  background-color: $bckgrColor;
+  background-color: $bckgr-color;
 }
 
 html {
-  height: $pageHeight;
+  height: $page-height;
 }
 body {
   width: 1280px;
   margin: 0 auto;
-  height: $pageHeight;
+  height: $page-height;
 }
 //******************************
 //*******start screen***********
-.startScreen {
+.start-screen {
   background: url(../../assets/images/noise_transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
     linear-gradient(0deg, #211f20, #211f20);
@@ -47,24 +47,24 @@ header {
   height: 60px;
   display: flex;
   padding-top: 60px;
-  @include margineWidth();
+  @include marginWidth();
   justify-content: space-between;
 }
 h1 {
   a {
-    color: $colorPrimary;
-    @include fontsGeorgia(32px);
+    color: $color-primary;
+    @include fontGeorgia(32px);
     letter-spacing: 0.06em;
     line-height: 110%;
     text-decoration: none;
     &:hover {
-      color: $colorLight;
+      color: $color-light;
     }
   }
 }
 .subtitle {
-  color: $colorLight;
-  @include fontsArial(13px);
+  color: $color-light;
+  @include fontArial(13px);
   letter-spacing: 0.1em;
   line-height: 15px;
   padding: 10px 0 0 4px;
@@ -75,50 +75,50 @@ nav {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-    @include fontsArial(15px);
+    @include fontArial(15px);
   }
   a {
-    color: $colorDarkS;
+    color: $color-dark-s;
     text-decoration: none;
     &:hover {
-      color: $colorLight;
-      border-bottom: 3px $colorPrimary solid;
+      color: $color-light;
+      border-bottom: 3px $color-primary solid;
       padding-bottom: 3px;
     }
   }
 }
-.startScreenContent {
+.start-screen-content {
   display: flex;
-  width: $pageWidth;
+  width: $page-width;
   padding-top: 60px;
   justify-content: space-between;
-  @include margineWidth();
+  @include marginWidth();
   div {
     height: 322px;
     width: 460px;
     padding-top: 163px;
     h2 {
-      @include fontsGeorgia(44px);
+      @include fontGeorgia(44px);
       color: rgba(255, 255, 255, 1);
       width: 310px;
       line-height: 130%;
     }
     p {
-      @include fontsArial(15px);
+      @include fontArial(15px);
       line-height: 160%;
-      color: $colorDarkS;
+      color: $color-dark-s;
       align-items: center;
       margin: 42px 0;
     }
     button {
-      @include button($colorPrimary, $colorDark3xl);
+      @include button($color-primary, $color-dark-3xl);
       width: 207px;
       height: 52px;
-      @include fontsGeorgia(17px);
+      @include fontGeorgia(17px);
       line-height: 130%;
       letter-spacing: 0.06em;
       &:hover {
-        background-color: $colorPrimaryLight;
+        background-color: $color-primary-light;
       }
     }
   }
@@ -134,26 +134,26 @@ nav {
 .about {
   height: 588px;
 }
-.aboutContent {
+.about-content {
   height: 408px;
-  @include margineWidth();
+  @include marginWidth();
   margin-top: 80px;
   display: flex;
   width: 850px;
   justify-content: space-between;
 }
-.aboutTheScelter {
+.about-the-scelter {
   width: 430px;
   h3 {
-    color: $colorDarkL;
-    @include fontsGeorgia(35px);
+    color: $color-dark-l;
+    @include fontGeorgia(35px);
     width: 360px;
     line-height: 130%;
     letter-spacing: 0.06em;
   }
   p {
-    color: $colorDarkXl;
-    @include fontsArial(15px);
+    color: $color-dark-xl;
+    @include fontArial(15px);
     line-height: 160%;
     padding-top: 25px;
   }

@@ -8,7 +8,7 @@ body {
   height: 100%;
 }
 
-.startScreen {
+.start-screen {
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
 }
 
@@ -59,7 +59,7 @@ nav a:hover {
   padding-bottom: 3px;
 }
 
-.startScreenContent {
+.start-screen-content {
   display: flex;
   width: 1200px;
   padding-top: 60px;
@@ -67,25 +67,25 @@ nav a:hover {
   margin: 0 auto;
   width: 1200px;
 }
-.startScreenContent div {
+.start-screen-content div {
   height: 322px;
   width: 460px;
   padding-top: 163px;
 }
-.startScreenContent div h2 {
+.start-screen-content div h2 {
   font: 400 44px "Georgia";
   color: white;
   width: 310px;
   line-height: 130%;
 }
-.startScreenContent div p {
+.start-screen-content div p {
   font: 400 15px "Arial";
   line-height: 160%;
   color: #cdcdcd;
   align-items: center;
   margin: 42px 0;
 }
-.startScreenContent div button {
+.start-screen-content div button {
   color: #292929;
   align-items: center;
   border-radius: 100px;
@@ -96,10 +96,10 @@ nav a:hover {
   line-height: 130%;
   letter-spacing: 0.06em;
 }
-.startScreenContent div button:hover {
+.start-screen-content div button:hover {
   background-color: #fddcc4;
 }
-.startScreenContent img {
+.start-screen-content img {
   width: 60%;
 }
 
