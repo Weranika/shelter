@@ -3,8 +3,10 @@ $pageWidth: 1200px;
 $colorPrimary: rgba(241, 205, 179, 1);
 $colorLight: rgba(255, 255, 255, 1);
 $colorPrimaryLight: rgba(253, 220, 196, 1);
+$colorDarkS: rgba(205, 205, 205, 1);
 $colorDark3xl: rgba(41, 41, 41, 1);
-
+$colorDarkL: rgba(84, 84, 84, 1);
+$colorDarkXl: rgba(76, 76, 76, 1);
 @mixin link {
   text-decoration: none;
 }
@@ -76,7 +78,7 @@ nav {
     @include fontsArial(15px);
   }
   a {
-    color: rgba(205, 205, 205, 1);
+    color: $colorDarkS;
     text-decoration: none;
     &:hover {
       color: $colorLight;
@@ -104,7 +106,7 @@ nav {
     p {
       @include fontsArial(15px);
       line-height: 160%;
-      color: rgba(205, 205, 205, 1);
+      color: $colorDarkS;
       align-items: center;
       margin: 42px 0;
     }
@@ -127,3 +129,32 @@ nav {
 
 //**************************
 //*******main***************
+
+//**********About***********
+.about {
+  height: 588px;
+}
+.aboutContent {
+  height: 408px;
+  @include margineWidth();
+  margin-top: 80px;
+  display: flex;
+  width: 850px;
+  justify-content: space-between;
+}
+.aboutTheScelter {
+  width: 430px;
+  h3 {
+    color: $colorDarkL;
+    @include fontsGeorgia(35px);
+    width: 360px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+  p {
+    color: $colorDarkXl;
+    @include fontsArial(15px);
+    line-height: 160%;
+    padding-top: 25px;
+  }
+}

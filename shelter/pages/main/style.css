@@ -103,4 +103,35 @@ nav a:hover {
   width: 60%;
 }
 
+.about {
+  height: 588px;
+}
+
+.aboutContent {
+  height: 408px;
+  margin: 0 auto;
+  width: 1200px;
+  margin-top: 80px;
+  display: flex;
+  width: 850px;
+  justify-content: space-between;
+}
+
+.aboutTheScelter {
+  width: 430px;
+}
+.aboutTheScelter h3 {
+  color: #545454;
+  font: 400 35px "Georgia";
+  width: 360px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.aboutTheScelter p {
+  color: #4c4c4c;
+  font: 400 15px "Arial";
+  line-height: 160%;
+  padding-top: 25px;
+}
+
 /*# sourceMappingURL=style.css.map */
