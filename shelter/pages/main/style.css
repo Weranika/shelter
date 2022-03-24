@@ -24,8 +24,8 @@ header {
 h1 a {
   color: #f1cdb3;
   font: 400 32px "Georgia";
-  letter-spacing: 0.06em;
   line-height: 110%;
+  letter-spacing: 0.06em;
   text-decoration: none;
 }
 h1 a:hover {
@@ -35,8 +35,8 @@ h1 a:hover {
 .subtitle {
   color: white;
   font: 400 13px "Arial";
-  letter-spacing: 0.1em;
   line-height: 15px;
+  letter-spacing: 0.1em;
   padding: 10px 0 0 4px;
 }
 
@@ -48,6 +48,8 @@ nav ul {
   list-style-type: none;
   justify-content: space-between;
   font: 400 15px "Arial";
+  line-height: 1;
+  letter-spacing: 1;
 }
 nav a {
   color: #cdcdcd;
@@ -74,13 +76,15 @@ nav a:hover {
 }
 .start-screen-content div h2 {
   font: 400 44px "Georgia";
+  line-height: 130%;
+  letter-spacing: 1;
   color: white;
   width: 310px;
-  line-height: 130%;
 }
 .start-screen-content div p {
   font: 400 15px "Arial";
   line-height: 160%;
+  letter-spacing: 1;
   color: #cdcdcd;
   align-items: center;
   margin: 42px 0;
@@ -98,6 +102,7 @@ nav a:hover {
 }
 .start-screen-content div button:hover {
   background-color: #fddcc4;
+  cursor: pointer;
 }
 .start-screen-content img {
   width: 60%;
@@ -107,7 +112,7 @@ nav a:hover {
   height: 588px;
 }
 
-.aboutContent {
+.about-content {
   height: 408px;
   margin: 0 auto;
   width: 1200px;
@@ -117,21 +122,129 @@ nav a:hover {
   justify-content: space-between;
 }
 
-.aboutTheScelter {
+.about-the-scelter {
   width: 430px;
 }
-.aboutTheScelter h3 {
+.about-the-scelter h3 {
   color: #545454;
   font: 400 35px "Georgia";
-  width: 360px;
   line-height: 130%;
   letter-spacing: 0.06em;
+  width: 360px;
 }
-.aboutTheScelter p {
+.about-the-scelter p {
   color: #4c4c4c;
   font: 400 15px "Arial";
   line-height: 160%;
+  letter-spacing: 1;
   padding-top: 25px;
+}
+
+.pets {
+  height: 877px;
+  background-color: #f6f6f6;
+}
+
+.pets-content {
+  margin: 0 auto;
+  width: 1200px;
+  text-align: center;
+}
+.pets-content h3 {
+  font: 400 35px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  width: 30rem;
+  margin: 0 auto;
+  padding: 80px 0 60px 0;
+}
+
+.slider {
+  display: flex;
+  height: 435px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button_arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: #f6f6f6;
+}
+.button_arrow:hover {
+  background-color: #fddcc4;
+  border: none;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 990px;
+}
+.cards li {
+  list-style-type: none;
+  background-color: #fafafa;
+  border-radius: 9px;
+}
+.cards li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.cards li h5 {
+  color: #545454;
+  margin: 30px auto;
+  font: 400 20px "Georgia";
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+.cards li img {
+  border-radius: 9px 9px 0px 0px;
+}
+.cards li .button_secondary {
+  color: #292929;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #fafafa;
+  border: 2px solid #f1cdb3;
+  width: 187px;
+  height: 52px;
+  font: 400 17px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  background-color: #fafafa;
+  margin-bottom: 30px;
+}
+.cards li .button_secondary:hover {
+  background-color: #fddcc4;
+  border: none;
+  cursor: pointer;
+}
+.cards li:hover {
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.get-to-know {
+  margin-top: 60px;
+  color: #292929;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #f1cdb3;
+  font: 400 17px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  width: 261px;
+  height: 52px;
+  border: none;
+}
+.get-to-know:hover {
+  background-color: #fddcc4;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
