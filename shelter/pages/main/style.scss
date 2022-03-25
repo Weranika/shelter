@@ -224,12 +224,13 @@ nav {
         cursor: pointer;
       }
     }
-    &:hover {
-      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-      cursor: pointer;
-    }
+  }
+  li:hover button {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: $color-light-xl;
   }
 }
+
 .get-to-know {
   margin-top: 60px;
   @include button($color-primary, $color-dark-3xl);
@@ -241,4 +242,21 @@ nav {
     background-color: $color-primary-light;
     cursor: pointer;
   }
+}
+//**********Our friends***********
+.help {
+  height: 611px;
+  background-color: $color-light-xl;
+  text-align: center;
+  h3 {
+    @include fontGeorgia(35px, 130%, 0.06em);
+    padding: 80px 0 60px 0;
+  }
+}
+.help_list {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+  justify-content: center;
 }
