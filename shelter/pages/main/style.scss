@@ -85,11 +85,17 @@ nav {
   a {
     color: $color-dark-s;
     text-decoration: none;
+    a.active,
     &:hover {
       color: $color-light;
       border-bottom: 3px $color-primary solid;
       padding-bottom: 3px;
     }
+  }
+  a.active {
+    color: $color-light;
+    border-bottom: 3px $color-primary solid;
+    padding-bottom: 3px;
   }
 }
 .start-screen-content {
@@ -244,7 +250,7 @@ nav {
     cursor: pointer;
   }
 }
-//**********Our friends***********
+//**********Help***********
 .help {
   height: 611px;
   background-color: $color-light-xl;
@@ -252,6 +258,7 @@ nav {
   h3 {
     @include fontGeorgia(35px, 130%, 0.06em);
     padding: 80px 0 60px;
+    color: $color-dark-l;
   }
 }
 .help_list {
@@ -260,8 +267,16 @@ nav {
   flex-wrap: wrap;
   gap: 55px 120px;
   justify-content: center;
+  li {
+    height: 113px;
+    @include fontGeorgia(20px, 115%, 0.06em);
+    color: $color-dark-l;
+    img {
+      padding-bottom: 30px;
+    }
+  }
 }
-//**********Our friends***********
+//**********donation***********
 .donation {
   height: 462px;
   background-color: $color-light-l;
@@ -287,7 +302,6 @@ nav {
     @include fontGeorgia(15px, 110%, 0.06em);
     padding: 20px 0;
   }
-
   div {
     a {
       width: 349px;
@@ -316,5 +330,44 @@ nav {
     @include fontArial(12px, 150%, 0);
     color: $color-dark-m;
     font-style: italic;
+  }
+}
+//**********Footer***********
+footer {
+  background: url(../../assets/images/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  height: 350px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+.footer-content {
+  display: flex;
+  @include marginWidth();
+  height: 310px;
+  justify-content: space-between;
+}
+.contacts,
+.location {
+  width: 279px;
+  h3 {
+    @include fontGeorgia(35px, 130%, 0.06em);
+    color: $color-light-xl;
+  }
+  a {
+    @include fontGeorgia(20px, 115%, 0.06em);
+    color: $color-primary;
+    display: flex;
+    padding-top: 45px;
+    width: 251px;
+    height: 32px;
+    align-items: center;
+  }
+  .boston,
+  .london {
+    width: 305px;
+  }
+  img {
+    margin-right: 20px;
   }
 }

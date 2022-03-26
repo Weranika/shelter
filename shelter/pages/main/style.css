@@ -55,7 +55,12 @@ nav a {
   color: #cdcdcd;
   text-decoration: none;
 }
-nav a:hover {
+nav a a.active, nav a:hover {
+  color: white;
+  border-bottom: 3px #f1cdb3 solid;
+  padding-bottom: 3px;
+}
+nav a.active {
   color: white;
   border-bottom: 3px #f1cdb3 solid;
   padding-bottom: 3px;
@@ -257,6 +262,7 @@ nav a:hover {
   line-height: 130%;
   letter-spacing: 0.06em;
   padding: 80px 0 60px;
+  color: #545454;
 }
 
 .help_list {
@@ -265,6 +271,16 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 55px 120px;
   justify-content: center;
+}
+.help_list li {
+  height: 113px;
+  font: 400 20px "Georgia";
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.help_list li img {
+  padding-bottom: 30px;
 }
 
 .donation {
@@ -329,6 +345,55 @@ nav a:hover {
   letter-spacing: 0;
   color: #b2b2b2;
   font-style: italic;
+}
+
+footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+  height: 350px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  height: 310px;
+  justify-content: space-between;
+}
+
+.contacts,
+.location {
+  width: 279px;
+}
+.contacts h3,
+.location h3 {
+  font: 400 35px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: white;
+}
+.contacts a,
+.location a {
+  font: 400 20px "Georgia";
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  display: flex;
+  padding-top: 45px;
+  width: 251px;
+  height: 32px;
+  align-items: center;
+}
+.contacts .boston,
+.contacts .london,
+.location .boston,
+.location .london {
+  width: 305px;
+}
+.contacts img,
+.location img {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
