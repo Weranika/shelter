@@ -85,11 +85,8 @@ nav {
   a {
     color: $color-dark-s;
     text-decoration: none;
-    a.active,
     &:hover {
-      color: $color-light;
-      border-bottom: 3px $color-primary solid;
-      padding-bottom: 3px;
+      color: $color-light-s;
     }
   }
   a.active {

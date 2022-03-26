@@ -1,0 +1,120 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.start-screen {
+  background: white;
+}
+
+header {
+  height: 120px;
+}
+
+.header-content {
+  padding-top: 30px;
+  height: 60px;
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  justify-content: space-between;
+}
+
+h1 a {
+  font: 400 32px "Georgia";
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #545454;
+}
+h1 a:hover {
+  color: white;
+}
+
+.subtitle {
+  font: 400 13px "Arial";
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  padding: 10px 0 0 4px;
+  color: #292929;
+}
+
+nav {
+  width: 443px;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  font: 400 15px "Arial";
+  line-height: 1;
+  letter-spacing: 1;
+}
+nav a {
+  color: #545454;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #292929;
+}
+nav a.active {
+  color: #292929;
+  border-bottom: 3px #f1cdb3 solid;
+  padding-bottom: 3px;
+}
+
+footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+  height: 350px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  height: 310px;
+  justify-content: space-between;
+}
+
+.contacts,
+.location {
+  width: 279px;
+}
+.contacts h3,
+.location h3 {
+  font: 400 35px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: white;
+}
+.contacts a,
+.location a {
+  font: 400 20px "Georgia";
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  display: flex;
+  padding-top: 45px;
+  width: 251px;
+  height: 32px;
+  align-items: center;
+}
+.contacts .boston,
+.contacts .london,
+.location .boston,
+.location .london {
+  width: 305px;
+}
+.contacts img,
+.location img {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

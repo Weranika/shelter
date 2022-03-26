@@ -55,10 +55,8 @@ nav a {
   color: #cdcdcd;
   text-decoration: none;
 }
-nav a a.active, nav a:hover {
-  color: white;
-  border-bottom: 3px #f1cdb3 solid;
-  padding-bottom: 3px;
+nav a:hover {
+  color: #fafafa;
 }
 nav a.active {
   color: white;
