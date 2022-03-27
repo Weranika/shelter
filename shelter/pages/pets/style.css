@@ -211,6 +211,7 @@ footer {
   width: 251px;
   height: 32px;
   align-items: center;
+  text-decoration: none;
 }
 .contacts .boston,
 .contacts .london,
