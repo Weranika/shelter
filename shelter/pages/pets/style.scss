@@ -52,6 +52,9 @@ body {
 //*********header***************
 header {
   height: 120px;
+  width: 1280px;
+  position: fixed;
+  background: $color-light-xl;
 }
 .header-content {
   padding-top: 30px;
@@ -59,6 +62,7 @@ header {
   display: flex;
   @include marginWidth();
   justify-content: space-between;
+  align-items: center;
 }
 h1 {
   a {
@@ -66,7 +70,7 @@ h1 {
     text-decoration: none;
     color: $color-dark-l;
     &:hover {
-      color: $color-light;
+      color: $color-primary;
     }
   }
 }
@@ -98,9 +102,59 @@ nav {
 }
 //**************************
 //*******main***************
-
+main {
+  background: $color-light-l;
+  text-align: center;
+}
+h2 {
+  padding: 80px 0 40px;
+  color: $color-dark-l;
+  @include fontGeorgia(35px, 130%, 0.06em);
+  width: 400px;
+  @include marginWidth();
+}
 //**********Pets***********
-
+.pets-conteiner {
+  @include marginWidth();
+}
+.cards-container {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px 40px;
+  .card {
+    height: 435px;
+    width: 270px;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    &:hover {
+      background-color: $color-light-xl;
+      cursor: pointer;
+      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+  }
+  figcaption {
+    color: $color-dark-l;
+    margin: 30px auto;
+    @include fontGeorgia(20px, 23px, 0.06em);
+  }
+  img {
+    border-radius: 9px 9px 0px 0px;
+  }
+  .button_secondary {
+    @include button($color-light-s, $color-dark-3xl);
+    border: 2px solid $color-primary;
+    width: 187px;
+    height: 52px;
+    @include fontGeorgia(17px, 130%, 0.06em);
+    background-color: $color-light-s;
+    margin-bottom: 30px;
+    &:hover {
+      background-color: $color-primary-light;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
 //**********Footer***********
 footer {
   background: url(../../assets/images/noise_transparent@2x.png),

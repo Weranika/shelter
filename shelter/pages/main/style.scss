@@ -55,9 +55,10 @@ body {
 header {
   height: 60px;
   display: flex;
-  padding-top: 60px;
+  padding-top: 30px;
   @include marginWidth();
   justify-content: space-between;
+  align-items: center;
 }
 h1 {
   a {
@@ -234,7 +235,6 @@ nav {
     background: $color-light-xl;
   }
 }
-
 .get-to-know {
   margin-top: 60px;
   @include button($color-primary, $color-dark-3xl);
