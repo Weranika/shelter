@@ -73,6 +73,7 @@ nav a.active {
 }
 
 main {
+  padding-top: 120px;
   background: #f6f6f6;
   text-align: center;
 }
@@ -109,17 +110,20 @@ h2 {
   cursor: pointer;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
-.cards-container figcaption {
+.cards-container .card:hover button {
+  background-color: white;
+}
+.cards-container .card figcaption {
   color: #545454;
   margin: 30px auto;
   font: 400 20px "Georgia";
   line-height: 23px;
   letter-spacing: 0.06em;
 }
-.cards-container img {
+.cards-container .card img {
   border-radius: 9px 9px 0px 0px;
 }
-.cards-container .button_secondary {
+.cards-container .card .button_secondary {
   color: #292929;
   align-items: center;
   border-radius: 100px;
@@ -133,10 +137,41 @@ h2 {
   background-color: #fafafa;
   margin-bottom: 30px;
 }
-.cards-container .button_secondary:hover {
+.cards-container .card .button_secondary:hover {
   background-color: #fddcc4;
   border: none;
   cursor: pointer;
+}
+
+.pets-navigation {
+  padding: 45px 0 100px;
+  margin: 0 auto;
+  width: 1200px;
+}
+.pets-navigation button {
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+}
+
+.button_navigator_inactive {
+  border: 2px solid #cdcdcd;
+}
+
+.button_navigator_active {
+  background: #f1cdb3;
+  border: none;
+  cursor: pointer;
+}
+
+.button_navigator {
+  border: 2px solid #f1cdb3;
+  color: #292929;
+  cursor: pointer;
+}
+.button_navigator:hover {
+  background: #fddcc4;
+  border: none;
 }
 
 footer {

@@ -12,9 +12,7 @@ $color-dark-m: rgba(178, 178, 178, 1);
 $color-dark-l: rgba(84, 84, 84, 1);
 $color-dark-xl: rgba(76, 76, 76, 1);
 $color-dark-3xl: rgba(41, 41, 41, 1);
-@mixin link {
-  text-decoration: none;
-}
+
 @mixin marginWidth {
   margin: 0 auto;
   width: $page-width;
@@ -103,6 +101,7 @@ nav {
 //**************************
 //*******main***************
 main {
+  padding-top: 120px;
   background: $color-light-l;
   text-align: center;
 }
@@ -130,29 +129,58 @@ h2 {
       background-color: $color-light-xl;
       cursor: pointer;
       box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+      button {
+        background-color: $color-light-xl;
+      }
+    }
+    figcaption {
+      color: $color-dark-l;
+      margin: 30px auto;
+      @include fontGeorgia(20px, 23px, 0.06em);
+    }
+    img {
+      border-radius: 9px 9px 0px 0px;
+    }
+    .button_secondary {
+      @include button($color-light-s, $color-dark-3xl);
+      border: 2px solid $color-primary;
+      width: 187px;
+      height: 52px;
+      @include fontGeorgia(17px, 130%, 0.06em);
+      background-color: $color-light-s;
+      margin-bottom: 30px;
+      &:hover {
+        background-color: $color-primary-light;
+        border: none;
+        cursor: pointer;
+      }
     }
   }
-  figcaption {
-    color: $color-dark-l;
-    margin: 30px auto;
-    @include fontGeorgia(20px, 23px, 0.06em);
-  }
-  img {
-    border-radius: 9px 9px 0px 0px;
-  }
-  .button_secondary {
-    @include button($color-light-s, $color-dark-3xl);
-    border: 2px solid $color-primary;
-    width: 187px;
+}
+.pets-navigation {
+  padding: 45px 0 100px;
+  @include marginWidth();
+  button {
+    border-radius: 100px;
+    width: 52px;
     height: 52px;
-    @include fontGeorgia(17px, 130%, 0.06em);
-    background-color: $color-light-s;
-    margin-bottom: 30px;
-    &:hover {
-      background-color: $color-primary-light;
-      border: none;
-      cursor: pointer;
-    }
+  }
+}
+.button_navigator_inactive {
+  border: 2px solid $color-dark-s;
+}
+.button_navigator_active {
+  background: $color-primary;
+  border: none;
+  cursor: pointer;
+}
+.button_navigator {
+  border: 2px solid $color-primary;
+  color: $color-dark-3xl;
+  cursor: pointer;
+  &:hover {
+    background: $color-primary-light;
+    border: none;
   }
 }
 //**********Footer***********
