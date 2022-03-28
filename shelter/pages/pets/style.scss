@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Arial;
+  src: url(../../assets/fonts/arial.woff), format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: Georgia;
+  src: url(../../assets/fonts/georgia.woff), format("woff");
+  font-style: normal;
+}
 $page-height: 100%;
 $page-width: 1200px;
 
@@ -42,11 +52,7 @@ body {
   margin: 0 auto;
   height: $page-height;
 }
-//******************************
-//*******start screen***********
-.start-screen {
-  background: $color-light-xl;
-}
+
 //*********header***************
 header {
   height: 120px;
