@@ -19,21 +19,21 @@ body {
 }
 
 .start-screen {
-  height: 56.3em;
+  height: 56.75em;
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
 }
 
 header {
   height: 3.76em;
   display: flex;
-  padding-top: 3.2em;
+  padding-top: 3.66em;
   margin: 0 auto;
   width: 1200px;
 }
 
 .logo {
-  padding-right: 47.53%;
-  padding-top: 3px;
+  padding-right: 47.6%;
+  padding-top: 2px;
 }
 
 h1 a {
@@ -52,7 +52,7 @@ h1 a:hover {
   font: 400 13px "Arial";
   line-height: 15px;
   letter-spacing: 0.1em;
-  padding: 0.65em 0 0 0.28em;
+  padding: 0.7em 0 0px 0.3em;
 }
 
 nav {
@@ -124,7 +124,8 @@ nav a.active {
 }
 .start-screen-content img {
   width: 58%;
-  padding-left: 3.1%;
+  padding-left: 2.9vw;
+  margin-top: -1px;
 }
 
 .about {
@@ -135,13 +136,14 @@ nav a.active {
   height: 25.5em;
   margin: 0 auto;
   width: 1200px;
-  margin-top: 5em;
+  margin-top: 12.85vh;
   display: flex;
-  width: 53.3em;
+  width: 53.21em;
+  padding-left: 3px;
 }
 
 .about-the-scelter {
-  margin-left: 7.55em;
+  margin-left: 7.49em;
 }
 .about-the-scelter h3 {
   padding-top: 0.43em;
@@ -150,17 +152,18 @@ nav a.active {
   line-height: 130%;
   letter-spacing: 0.06em;
   width: 10em;
+  line-height: 1.28;
 }
 .about-the-scelter p {
   color: #4c4c4c;
   font: 400 15px "Arial";
   line-height: 160%;
   letter-spacing: 1;
-  padding-top: 1.61em;
+  padding-top: 1.63em;
 }
 
 .pets {
-  height: 877px;
+  height: 54.8em;
   background-color: #f6f6f6;
 }
 
@@ -168,6 +171,7 @@ nav a.active {
   margin: 0 auto;
   width: 1200px;
   text-align: center;
+  padding-left: 3px;
 }
 .pets-content h3 {
   font: 400 35px "Georgia";
@@ -176,15 +180,17 @@ nav a.active {
   color: #545454;
   width: 30rem;
   margin: 0 auto;
-  padding: 12.8vh 0 9.5vh;
+  padding: 2.295em 0 1.67em;
+  line-height: 1.28;
 }
 
 .slider {
   display: flex;
-  height: 69.2vh;
+  height: 435px;
   justify-content: space-between;
   align-items: center;
-  margin-left: -1px;
+  margin: 0 auto;
+  width: 1200px;
 }
 
 .button_arrow {
@@ -194,6 +200,7 @@ nav a.active {
   box-sizing: border-box;
   border-radius: 100px;
   background-color: #f6f6f6;
+  margin-left: -1px;
 }
 .button_arrow:hover {
   background-color: #fddcc4;
@@ -204,12 +211,14 @@ nav a.active {
 .cards {
   display: flex;
   justify-content: space-between;
-  width: 72.5vw;
+  width: 988px;
 }
 .cards li {
   list-style-type: none;
   background-color: #fafafa;
   border-radius: 9px;
+  margin-left: -2px;
+  width: 270px;
 }
 .cards li:hover {
   background-color: white;
@@ -217,15 +226,13 @@ nav a.active {
 }
 .cards li h5 {
   color: #545454;
-  margin-bottom: 4.8vh;
+  margin: 26px 0px 29px 1px;
   font: 400 20px "Georgia";
   line-height: 23px;
   letter-spacing: 0.06em;
-  padding-left: 1px;
 }
 .cards li img {
   border-radius: 9px 9px 0px 0px;
-  margin-bottom: 4.2vh;
 }
 .cards li .button_secondary {
   color: #292929;
@@ -240,6 +247,8 @@ nav a.active {
   letter-spacing: 0.06em;
   background-color: #fafafa;
   margin-bottom: 30px;
+  margin-left: -1px;
+  padding: 1px 0 0 2px;
 }
 .cards li .button_secondary:hover {
   background-color: #fddcc4;
@@ -252,7 +261,7 @@ nav a.active {
 }
 
 .get-to-know {
-  margin-top: 9.8vh;
+  margin-top: 3.53em;
   color: #292929;
   align-items: center;
   border-radius: 100px;
@@ -270,16 +279,21 @@ nav a.active {
   cursor: pointer;
 }
 
+.help-content {
+  margin: 0 auto;
+  width: 1200px;
+}
+
 .help {
-  height: 611px;
+  height: 591px;
   background-color: white;
   text-align: center;
 }
 .help h3 {
-  font: 400 35px "Georgia";
+  font: 400 2.19em "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
-  padding: 80px 0 60px;
+  padding: 1.73em 0 1.65em 2px;
   color: #545454;
 }
 
@@ -287,7 +301,7 @@ nav a.active {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  gap: 55px 120px;
+  gap: 55px 118px;
   justify-content: center;
 }
 .help_list li {
@@ -298,24 +312,28 @@ nav a.active {
   color: #545454;
 }
 .help_list li img {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+}
+.help_list li p {
+  padding-left: 2px;
 }
 
 .donation {
-  height: 462px;
+  height: 464px;
   background-color: #f6f6f6;
 }
 
 .donation-content {
   width: 915px;
   margin: 0 auto;
-  padding: 80px 0 100px;
+  padding: 5.1em 0 100px;
   display: flex;
   color: #545454;
   justify-content: space-between;
 }
-.donation-content img {
+.donation-content .donation-dog {
   height: 100%;
+  padding-top: 10px;
 }
 
 .make-donation {
@@ -323,15 +341,15 @@ nav a.active {
 }
 .make-donation h3 {
   width: 300px;
-  font: 400 35px "Georgia";
+  font: 400 2.19em "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
+  padding-bottom: 19px;
 }
 .make-donation p {
   font: 400 15px "Georgia";
   line-height: 110%;
   letter-spacing: 0.06em;
-  padding: 20px 0;
 }
 .make-donation div a {
   width: 349px;
@@ -343,6 +361,7 @@ nav a.active {
   align-items: center;
   color: #545454;
   text-decoration: none;
+  margin: 20px 0;
 }
 .make-donation div a:hover {
   background: #fddcc4;
@@ -390,6 +409,8 @@ footer {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: white;
+  padding-top: 17px;
+  line-height: 1.28;
 }
 .contacts a,
 .location a {
@@ -398,7 +419,7 @@ footer {
   letter-spacing: 0.06em;
   color: #f1cdb3;
   display: flex;
-  padding-top: 45px;
+  padding-top: 40px;
   width: 251px;
   height: 32px;
   align-items: center;
@@ -413,6 +434,13 @@ footer {
 .contacts img,
 .location img {
   margin-right: 20px;
+}
+
+.location {
+  margin-left: -20px;
+}
+.location div {
+  margin-left: -2px;
 }
 
 /*# sourceMappingURL=style.css.map */

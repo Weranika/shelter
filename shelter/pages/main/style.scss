@@ -57,7 +57,7 @@ body {
 //******************************
 //*******start screen***********
 .start-screen {
-  height: 56.3em;
+  height: 56.75em;
   background: url(../../assets/images/noise_transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
     linear-gradient(0deg, #211f20, #211f20);
@@ -66,12 +66,12 @@ body {
 header {
   height: 3.76em;
   display: flex;
-  padding-top: 3.2em;
+  padding-top: 3.66em;
   @include marginWidth();
 }
 .logo {
-  padding-right: 47.53%;
-  padding-top: 3px;
+  padding-right: 47.6%;
+  padding-top: 2px;
 }
 h1 {
   a {
@@ -86,7 +86,7 @@ h1 {
 .subtitle {
   color: $color-light;
   @include fontArial(13px, 15px, 0.1em);
-  padding: 0.65em 0 0 0.28em;
+  padding: 0.7em 0 0px 0.3em;
 }
 nav {
   width: 27.7em;
@@ -143,7 +143,8 @@ nav {
   }
   img {
     width: 58%;
-    padding-left: 3.1%;
+    padding-left: 2.9vw;
+    margin-top: -1px;
   }
 }
 //**************************
@@ -156,46 +157,50 @@ nav {
 .about-content {
   height: 25.5em;
   @include marginWidth();
-  margin-top: 5em;
+  margin-top: 12.85vh;
   display: flex;
-  width: 53.3em;
+  width: 53.21em;
+  padding-left: 3px;
 }
 .about-the-scelter {
-  margin-left: 7.55em;
+  margin-left: 7.49em;
   h3 {
     padding-top: 0.43em;
     color: $color-dark-l;
     @include fontGeorgia(35px, 130%, 0.06em);
     width: 10em;
+    line-height: 1.28;
   }
   p {
     color: $color-dark-xl;
     @include fontArial(15px, 160%, 1);
-    padding-top: 1.61em;
+    padding-top: 1.63em;
   }
 }
 //**********Our friends***********
 .pets {
-  height: 877px;
+  height: 54.8em;
   background-color: $color-light-l;
 }
 .pets-content {
   @include marginWidth();
   text-align: center;
+  padding-left: 3px;
   h3 {
     @include fontGeorgia(35px, 130%, 0.06em);
     color: $color-dark-l;
     width: 30rem;
     margin: 0 auto;
-    padding: 12.8vh 0 9.5vh;
+    padding: 2.295em 0 1.67em;
+    line-height: 1.28;
   }
 }
 .slider {
   display: flex;
-  height: 69.2vh;
+  height: 435px;
   justify-content: space-between;
   align-items: center;
-  margin-left: -1px;
+  @include marginWidth();
 }
 .button_arrow {
   width: 52px;
@@ -204,6 +209,7 @@ nav {
   box-sizing: border-box;
   border-radius: 100px;
   background-color: $color-light-l;
+  margin-left: -1px;
   &:hover {
     background-color: $color-primary-light;
     border: none;
@@ -213,24 +219,24 @@ nav {
 .cards {
   display: flex;
   justify-content: space-between;
-  width: 72.5vw;
+  width: 988px;
   li {
     list-style-type: none;
     background-color: $color-light-s;
     border-radius: 9px;
+    margin-left: -2px;
+    width: 270px;
     &:hover {
       background-color: $color-light-xl;
       cursor: pointer;
     }
     h5 {
       color: $color-dark-l;
-      margin-bottom: 4.8vh;
+      margin: 26px 0px 29px 1px;
       @include fontGeorgia(20px, 23px, 0.06em);
-      padding-left: 1px;
     }
     img {
       border-radius: 9px 9px 0px 0px;
-      margin-bottom: 4.2vh;
     }
     .button_secondary {
       @include button($color-light-s, $color-dark-3xl);
@@ -240,6 +246,8 @@ nav {
       @include fontGeorgia(17px, 130%, 0.06em);
       background-color: $color-light-s;
       margin-bottom: 30px;
+      margin-left: -1px;
+      padding: 1px 0 0 2px;
       &:hover {
         background-color: $color-primary-light;
         border: none;
@@ -253,7 +261,7 @@ nav {
   }
 }
 .get-to-know {
-  margin-top: 9.8vh;
+  margin-top: 3.53em;
   @include button($color-primary, $color-dark-3xl);
   @include fontGeorgia(17px, 130%, 0.06em);
   width: 15.4em;
@@ -266,13 +274,16 @@ nav {
   }
 }
 //**********Help***********
+.help-content {
+  @include marginWidth();
+}
 .help {
-  height: 611px;
+  height: 591px;
   background-color: $color-light-xl;
   text-align: center;
   h3 {
-    @include fontGeorgia(35px, 130%, 0.06em);
-    padding: 80px 0 60px;
+    @include fontGeorgia(2.19em, 130%, 0.06em);
+    padding: 1.73em 0 1.65em 2px;
     color: $color-dark-l;
   }
 }
@@ -280,42 +291,46 @@ nav {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  gap: 55px 120px;
+  gap: 55px 118px;
   justify-content: center;
   li {
     height: 113px;
     @include fontGeorgia(20px, 115%, 0.06em);
     color: $color-dark-l;
     img {
-      padding-bottom: 30px;
+      padding-bottom: 25px;
+    }
+    p {
+      padding-left: 2px;
     }
   }
 }
 //**********donation***********
 .donation {
-  height: 462px;
+  height: 464px;
   background-color: $color-light-l;
 }
 .donation-content {
   width: 915px;
   margin: 0 auto;
-  padding: 80px 0 100px;
+  padding: 5.1em 0 100px;
   display: flex;
   color: $color-dark-l;
   justify-content: space-between;
-  img {
+  .donation-dog {
     height: 100%;
+    padding-top: 10px;
   }
 }
 .make-donation {
   width: 380px;
   h3 {
     width: 300px;
-    @include fontGeorgia(35px, 130%, 0.06em);
+    @include fontGeorgia(2.19em, 130%, 0.06em);
+    padding-bottom: 19px;
   }
   p {
     @include fontGeorgia(15px, 110%, 0.06em);
-    padding: 20px 0;
   }
   div {
     a {
@@ -328,6 +343,7 @@ nav {
       align-items: center;
       color: $color-dark-l;
       text-decoration: none;
+      margin: 20px 0;
       &:hover {
         background: $color-primary-light;
         box-shadow: 0px 4px 16px 9px rgb(255 255 255 / 15%);
@@ -368,12 +384,14 @@ footer {
   h3 {
     @include fontGeorgia(35px, 130%, 0.06em);
     color: $color-light-xl;
+    padding-top: 17px;
+    line-height: 1.28;
   }
   a {
     @include fontGeorgia(20px, 115%, 0.06em);
     color: $color-primary;
     display: flex;
-    padding-top: 45px;
+    padding-top: 40px;
     width: 251px;
     height: 32px;
     align-items: center;
@@ -385,5 +403,11 @@ footer {
   }
   img {
     margin-right: 20px;
+  }
+}
+.location {
+  margin-left: -20px;
+  div {
+    margin-left: -2px;
   }
 }
