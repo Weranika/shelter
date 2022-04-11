@@ -187,6 +187,7 @@ h2 {
 .button_navigator {
   border: 2px solid #f1cdb3;
   color: #292929;
+  background: #f6f6f6;
   cursor: pointer;
 }
 .button_navigator:hover {

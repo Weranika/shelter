@@ -194,6 +194,7 @@ h2 {
 .button_navigator {
   border: 2px solid $color-primary;
   color: $color-dark-3xl;
+  background: $color-light-l;
   cursor: pointer;
   &:hover {
     background: $color-primary-light;

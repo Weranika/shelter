@@ -34,6 +34,7 @@ header {
 .logo {
   padding-right: 47.6%;
   padding-top: 2px;
+  white-space: nowrap;
 }
 
 h1 a {
