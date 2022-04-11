@@ -104,7 +104,7 @@ nav.header-navigation a.active {
   letter-spacing: 1;
   color: #cdcdcd;
   align-items: center;
-  margin: 2.74em 0;
+  margin: 2.7em 0 2.75em;
 }
 .start-screen-content div button {
   color: #292929;
@@ -112,7 +112,7 @@ nav.header-navigation a.active {
   border-radius: 100px;
   background-color: #f1cdb3;
   width: 12.2em;
-  height: 2.99em;
+  height: 2.98em;
   font: 400 17px "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -213,28 +213,28 @@ nav.header-navigation a.active {
   justify-content: space-between;
   width: 988px;
 }
-.cards li {
+.cards figure {
   list-style-type: none;
   background-color: #fafafa;
   border-radius: 9px;
   margin-left: -2px;
   width: 270px;
 }
-.cards li:hover {
+.cards figure:hover {
   background-color: white;
   cursor: pointer;
 }
-.cards li h5 {
+.cards figure figcaption {
   color: #545454;
   margin: 26px 0px 29px 1px;
   font: 400 20px "Georgia";
   line-height: 23px;
   letter-spacing: 0.06em;
 }
-.cards li img {
+.cards figure img {
   border-radius: 9px 9px 0px 0px;
 }
-.cards li .button_secondary {
+.cards figure .button_secondary {
   color: #292929;
   align-items: center;
   border-radius: 100px;
@@ -250,12 +250,12 @@ nav.header-navigation a.active {
   margin-left: -1px;
   padding: 1px 0 0 2px;
 }
-.cards li .button_secondary:hover {
+.cards figure .button_secondary:hover {
   background-color: #fddcc4;
   border: none;
   cursor: pointer;
 }
-.cards li:hover button {
+.cards figure:hover button {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   background: white;
 }

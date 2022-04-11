@@ -127,12 +127,12 @@ nav.header-navigation {
       @include fontArial(15px, 160%, 1);
       color: $color-dark-s;
       align-items: center;
-      margin: 2.74em 0;
+      margin: 2.7em 0 2.75em;
     }
     button {
       @include button($color-primary, $color-dark-3xl);
       width: 12.2em;
-      height: 2.99em;
+      height: 2.98em;
       @include fontGeorgia(17px, 130%, 0.06em);
       border: none;
       &:hover {
@@ -220,7 +220,7 @@ nav.header-navigation {
   display: flex;
   justify-content: space-between;
   width: 988px;
-  li {
+  figure {
     list-style-type: none;
     background-color: $color-light-s;
     border-radius: 9px;
@@ -230,7 +230,7 @@ nav.header-navigation {
       background-color: $color-light-xl;
       cursor: pointer;
     }
-    h5 {
+    figcaption {
       color: $color-dark-l;
       margin: 26px 0px 29px 1px;
       @include fontGeorgia(20px, 23px, 0.06em);
@@ -255,7 +255,7 @@ nav.header-navigation {
       }
     }
   }
-  li:hover button {
+  figure:hover button {
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     background: $color-light-xl;
   }
