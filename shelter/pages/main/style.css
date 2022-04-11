@@ -55,11 +55,11 @@ h1 a:hover {
   padding: 0.7em 0 0px 0.3em;
 }
 
-nav {
+nav.header-navigation {
   width: 27.7em;
   padding-top: 1.8%;
 }
-nav ul {
+nav.header-navigation ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
@@ -67,14 +67,14 @@ nav ul {
   line-height: 1;
   letter-spacing: 1;
 }
-nav a {
+nav.header-navigation a {
   color: #cdcdcd;
   text-decoration: none;
 }
-nav a:hover {
+nav.header-navigation a:hover {
   color: #fafafa;
 }
-nav a.active {
+nav.header-navigation a.active {
   color: white;
   border-bottom: 3px #f1cdb3 solid;
   padding-bottom: 3px;

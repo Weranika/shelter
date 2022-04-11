@@ -55,22 +55,26 @@ body {
 
 //*********header***************
 header {
-  height: 120px;
+  height: 7.5em;
   width: 1280px;
   position: fixed;
   background: $color-light-xl;
 }
 .header-content {
-  padding-top: 30px;
+  padding-top: 1.7em;
   height: 60px;
   display: flex;
   @include marginWidth();
-  justify-content: space-between;
   align-items: center;
+}
+.logo {
+  padding-right: 47.15%;
+  padding-top: 7px;
+  width: 16%;
 }
 h1 {
   a {
-    @include fontGeorgia(32px, 110%, 0.06em);
+    @include fontGeorgia(2em, 110%, 0.06em);
     text-decoration: none;
     color: $color-dark-l;
     &:hover {
@@ -79,17 +83,18 @@ h1 {
   }
 }
 .subtitle {
-  @include fontArial(13px, 15px, 0.1em);
-  padding: 10px 0 0 4px;
+  @include fontArial(0.815em, 15px, 0.1em);
+  padding: 0.7em 0 0px 0.3em;
   color: $color-dark-3xl;
 }
 nav {
-  width: 443px;
+  width: 27.7em;
   ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-    @include fontArial(15px, 1, 1);
+    @include fontArial(0.94em, 1, 1);
+    padding: 0;
   }
   a {
     color: $color-dark-l;
@@ -107,16 +112,17 @@ nav {
 //**************************
 //*******main***************
 main {
-  padding-top: 120px;
+  padding-top: 7.5em;
   background: $color-light-l;
   text-align: center;
 }
 h2 {
-  padding: 80px 0 40px;
+  padding: 2.31em 0 1.7em;
   color: $color-dark-l;
-  @include fontGeorgia(35px, 130%, 0.06em);
-  width: 400px;
+  @include fontGeorgia(2.189em, 130%, 0.06em);
   @include marginWidth();
+  padding-left: 3px;
+  line-height: 1.28;
 }
 //**********Pets***********
 .pets-conteiner {
@@ -141,7 +147,7 @@ h2 {
     }
     figcaption {
       color: $color-dark-l;
-      margin: 30px auto;
+      margin: 26px 0 30px 3px;
       @include fontGeorgia(20px, 23px, 0.06em);
     }
     img {
@@ -155,6 +161,7 @@ h2 {
       @include fontGeorgia(17px, 130%, 0.06em);
       background-color: $color-light-s;
       margin-bottom: 30px;
+      padding: 0 0 1px 1px;
       &:hover {
         background-color: $color-primary-light;
         border: none;
@@ -164,12 +171,16 @@ h2 {
   }
 }
 .pets-navigation {
-  padding: 45px 0 100px;
+  padding: 3.73em 0 6.25em;
   @include marginWidth();
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
   button {
     border-radius: 100px;
     width: 52px;
     height: 52px;
+    @include fontGeorgia(20px, 115%, 0.06em);
   }
 }
 .button_navigator_inactive {
@@ -210,12 +221,14 @@ footer {
   h3 {
     @include fontGeorgia(35px, 130%, 0.06em);
     color: $color-light-xl;
+    padding-top: 17px;
+    line-height: 1.28;
   }
   a {
     @include fontGeorgia(20px, 115%, 0.06em);
     color: $color-primary;
     display: flex;
-    padding-top: 45px;
+    padding-top: 40px;
     width: 251px;
     height: 32px;
     align-items: center;
@@ -227,5 +240,11 @@ footer {
   }
   img {
     margin-right: 20px;
+  }
+}
+.location {
+  margin-left: -20px;
+  div {
+    margin-left: -2px;
   }
 }

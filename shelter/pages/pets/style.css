@@ -19,24 +19,29 @@ body {
 }
 
 header {
-  height: 120px;
+  height: 7.5em;
   width: 1280px;
   position: fixed;
   background: white;
 }
 
 .header-content {
-  padding-top: 30px;
+  padding-top: 1.7em;
   height: 60px;
   display: flex;
   margin: 0 auto;
   width: 1200px;
-  justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  padding-right: 47.15%;
+  padding-top: 7px;
+  width: 16%;
+}
+
 h1 a {
-  font: 400 32px "Georgia";
+  font: 400 2em "Georgia";
   line-height: 110%;
   letter-spacing: 0.06em;
   text-decoration: none;
@@ -47,23 +52,24 @@ h1 a:hover {
 }
 
 .subtitle {
-  font: 400 13px "Arial";
+  font: 400 0.815em "Arial";
   line-height: 15px;
   letter-spacing: 0.1em;
-  padding: 10px 0 0 4px;
+  padding: 0.7em 0 0px 0.3em;
   color: #292929;
 }
 
 nav {
-  width: 443px;
+  width: 27.7em;
 }
 nav ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  font: 400 15px "Arial";
+  font: 400 0.94em "Arial";
   line-height: 1;
   letter-spacing: 1;
+  padding: 0;
 }
 nav a {
   color: #545454;
@@ -79,20 +85,21 @@ nav a.active {
 }
 
 main {
-  padding-top: 120px;
+  padding-top: 7.5em;
   background: #f6f6f6;
   text-align: center;
 }
 
 h2 {
-  padding: 80px 0 40px;
+  padding: 2.31em 0 1.7em;
   color: #545454;
-  font: 400 35px "Georgia";
+  font: 400 2.189em "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
-  width: 400px;
   margin: 0 auto;
   width: 1200px;
+  padding-left: 3px;
+  line-height: 1.28;
 }
 
 .pets-conteiner {
@@ -121,7 +128,7 @@ h2 {
 }
 .cards-container .card figcaption {
   color: #545454;
-  margin: 30px auto;
+  margin: 26px 0 30px 3px;
   font: 400 20px "Georgia";
   line-height: 23px;
   letter-spacing: 0.06em;
@@ -142,6 +149,7 @@ h2 {
   letter-spacing: 0.06em;
   background-color: #fafafa;
   margin-bottom: 30px;
+  padding: 0 0 1px 1px;
 }
 .cards-container .card .button_secondary:hover {
   background-color: #fddcc4;
@@ -150,14 +158,20 @@ h2 {
 }
 
 .pets-navigation {
-  padding: 45px 0 100px;
+  padding: 3.73em 0 6.25em;
   margin: 0 auto;
   width: 1200px;
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
 }
 .pets-navigation button {
   border-radius: 100px;
   width: 52px;
   height: 52px;
+  font: 400 20px "Georgia";
+  line-height: 115%;
+  letter-spacing: 0.06em;
 }
 
 .button_navigator_inactive {
@@ -205,6 +219,8 @@ footer {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: white;
+  padding-top: 17px;
+  line-height: 1.28;
 }
 .contacts a,
 .location a {
@@ -213,7 +229,7 @@ footer {
   letter-spacing: 0.06em;
   color: #f1cdb3;
   display: flex;
-  padding-top: 45px;
+  padding-top: 40px;
   width: 251px;
   height: 32px;
   align-items: center;
@@ -228,6 +244,13 @@ footer {
 .contacts img,
 .location img {
   margin-right: 20px;
+}
+
+.location {
+  margin-left: -20px;
+}
+.location div {
+  margin-left: -2px;
 }
 
 /*# sourceMappingURL=style.css.map */
