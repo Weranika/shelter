@@ -114,10 +114,14 @@ nav.header-navigation a.active {
   background-color: #f1cdb3;
   width: 12.2em;
   height: 2.98em;
+  border: none;
+}
+.start-screen-content div button a {
   font: 400 17px "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
-  border: none;
+  text-decoration: none;
+  color: #292929;
 }
 .start-screen-content div button:hover {
   background-color: #fddcc4;
@@ -223,6 +227,12 @@ nav.header-navigation a.active {
 }
 .cards figure:hover {
   background-color: white;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+.cards figure:hover button {
+  background-color: #fddcc4;
+  border: none;
   cursor: pointer;
 }
 .cards figure figcaption {
@@ -251,15 +261,6 @@ nav.header-navigation a.active {
   margin-left: -1px;
   padding: 1px 0 0 2px;
 }
-.cards figure .button_secondary:hover {
-  background-color: #fddcc4;
-  border: none;
-  cursor: pointer;
-}
-.cards figure:hover button {
-  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-  background: white;
-}
 
 .get-to-know {
   margin-top: 3.53em;
@@ -274,6 +275,10 @@ nav.header-navigation a.active {
   height: 3.1em;
   border: none;
   padding-top: 1px;
+}
+.get-to-know a {
+  color: #292929;
+  text-decoration: none;
 }
 .get-to-know:hover {
   background-color: #fddcc4;

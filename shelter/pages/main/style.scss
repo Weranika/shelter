@@ -135,8 +135,12 @@ nav.header-navigation {
       @include button($color-primary, $color-dark-3xl);
       width: 12.2em;
       height: 2.98em;
-      @include fontGeorgia(17px, 130%, 0.06em);
       border: none;
+      a {
+        @include fontGeorgia(17px, 130%, 0.06em);
+        text-decoration: none;
+        color: $color-dark-3xl;
+      }
       &:hover {
         background-color: $color-primary-light;
         cursor: pointer;
@@ -230,7 +234,13 @@ nav.header-navigation {
     width: 270px;
     &:hover {
       background-color: $color-light-xl;
+      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
       cursor: pointer;
+      button {
+        background-color: $color-primary-light;
+        border: none;
+        cursor: pointer;
+      }
     }
     figcaption {
       color: $color-dark-l;
@@ -250,16 +260,7 @@ nav.header-navigation {
       margin-bottom: 30px;
       margin-left: -1px;
       padding: 1px 0 0 2px;
-      &:hover {
-        background-color: $color-primary-light;
-        border: none;
-        cursor: pointer;
-      }
     }
-  }
-  figure:hover button {
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-    background: $color-light-xl;
   }
 }
 .get-to-know {
@@ -270,6 +271,10 @@ nav.header-navigation {
   height: 3.1em;
   border: none;
   padding-top: 1px;
+  a {
+    color: $color-dark-3xl;
+    text-decoration: none;
+  }
   &:hover {
     background-color: $color-primary-light;
     cursor: pointer;

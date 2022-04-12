@@ -142,7 +142,9 @@ h2 {
       cursor: pointer;
       box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
       button {
-        background-color: $color-light-xl;
+        background-color: $color-primary-light;
+        border: none;
+        cursor: pointer;
       }
     }
     figcaption {
@@ -162,11 +164,6 @@ h2 {
       background-color: $color-light-s;
       margin-bottom: 30px;
       padding: 0 0 1px 1px;
-      &:hover {
-        background-color: $color-primary-light;
-        border: none;
-        cursor: pointer;
-      }
     }
   }
 }
@@ -185,18 +182,15 @@ h2 {
 }
 .button_navigator_inactive {
   border: 2px solid $color-dark-s;
-  background: $color-light-l;
 }
 .button_navigator_active {
   background: $color-primary;
   border: none;
-  cursor: pointer;
 }
 .button_navigator {
   border: 2px solid $color-primary;
   color: $color-dark-3xl;
   cursor: pointer;
-  background: $color-light-l;
   &:hover {
     background: $color-primary-light;
     border: none;

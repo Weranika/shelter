@@ -124,7 +124,9 @@ h2 {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .cards-container .card:hover button {
-  background-color: white;
+  background-color: #fddcc4;
+  border: none;
+  cursor: pointer;
 }
 .cards-container .card figcaption {
   color: #545454;
@@ -151,11 +153,6 @@ h2 {
   margin-bottom: 30px;
   padding: 0 0 1px 1px;
 }
-.cards-container .card .button_secondary:hover {
-  background-color: #fddcc4;
-  border: none;
-  cursor: pointer;
-}
 
 .pets-navigation {
   padding: 3.73em 0 6.25em;
@@ -176,20 +173,17 @@ h2 {
 
 .button_navigator_inactive {
   border: 2px solid #cdcdcd;
-  background: #f6f6f6;
 }
 
 .button_navigator_active {
   background: #f1cdb3;
   border: none;
-  cursor: pointer;
 }
 
 .button_navigator {
   border: 2px solid #f1cdb3;
   color: #292929;
   cursor: pointer;
-  background: #f6f6f6;
 }
 .button_navigator:hover {
   background: #fddcc4;
