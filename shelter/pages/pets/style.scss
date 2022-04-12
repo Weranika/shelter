@@ -181,6 +181,7 @@ h2 {
     width: 52px;
     height: 52px;
     @include fontGeorgia(20px, 115%, 0.06em);
+    background: $color-light-l;
   }
 }
 .button_navigator_inactive {
@@ -194,7 +195,6 @@ h2 {
 .button_navigator {
   border: 2px solid $color-primary;
   color: $color-dark-3xl;
-  background: $color-light-l;
   cursor: pointer;
   &:hover {
     background: $color-primary-light;
