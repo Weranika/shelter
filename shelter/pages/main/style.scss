@@ -133,8 +133,8 @@ nav.header-navigation {
     }
     button {
       @include button($color-primary, $color-dark-3xl);
-      width: 12.2em;
-      height: 2.98em;
+      width: 15.6em;
+      height: 3.9em;
       border: none;
       a {
         @include fontGeorgia(17px, 130%, 0.06em);
