@@ -172,6 +172,7 @@ h2 {
   font: 400 20px "Georgia";
   line-height: 115%;
   letter-spacing: 0.06em;
+  background: #f6f6f6;
 }
 
 .button_navigator_inactive {
@@ -187,7 +188,6 @@ h2 {
 .button_navigator {
   border: 2px solid #f1cdb3;
   color: #292929;
-  background: #f6f6f6;
   cursor: pointer;
 }
 .button_navigator:hover {
