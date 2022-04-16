@@ -9,7 +9,6 @@
   font-style: normal;
 }
 
-$page-height: 100%;
 $page-width: 1200px;
 
 $color-light: rgba(255, 255, 255, 1);
@@ -47,18 +46,13 @@ $color-dark-3xl: rgba(41, 41, 41, 1);
   background-color: $bckgr-color;
 }
 
-html {
-  height: $page-height;
-}
 body {
   width: 1280px;
   margin: 0 auto;
-  height: $page-height;
 }
 //******************************
 //*******start screen***********
 .start-screen {
-  height: 56.75em;
   background: url(../../assets/images/noise_transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
     linear-gradient(0deg, #211f20, #211f20);
@@ -69,6 +63,9 @@ header {
   display: flex;
   padding-top: 3.66em;
   @include marginWidth();
+  .burger {
+    display: none;
+  }
 }
 .logo {
   padding-right: 47.6%;
@@ -147,6 +144,9 @@ nav.header-navigation {
       }
     }
   }
+  .start-screen-content-w768 {
+    padding: 0;
+  }
   img {
     width: 58%;
     padding-left: 2.9vw;
@@ -157,16 +157,12 @@ nav.header-navigation {
 //*******main***************
 
 //**********About***********
-.about {
-  height: 31.8em;
-}
 .about-content {
-  height: 25.5em;
   @include marginWidth();
-  margin-top: 5em;
   display: flex;
   width: 53.21em;
   padding-left: 3px;
+  margin: 5em auto 101px;
 }
 .about-the-scelter {
   margin-left: 7.49em;
@@ -185,7 +181,6 @@ nav.header-navigation {
 }
 //**********Our friends***********
 .pets {
-  height: 54.8em;
   background-color: $color-light-l;
 }
 .pets-content {
@@ -197,7 +192,7 @@ nav.header-navigation {
     color: $color-dark-l;
     width: 30rem;
     margin: 0 auto;
-    padding: 2.295em 0 1.67em;
+    padding: 80px 0 59px;
     line-height: 1.28;
   }
 }
@@ -264,7 +259,7 @@ nav.header-navigation {
   }
 }
 .get-to-know {
-  margin-top: 3.53em;
+  margin: 3.53em 0 100px;
   @include button($color-primary, $color-dark-3xl);
   @include fontGeorgia(17px, 130%, 0.06em);
   width: 15.4em;
@@ -285,12 +280,11 @@ nav.header-navigation {
   @include marginWidth();
 }
 .help {
-  height: 591px;
   background-color: $color-light-xl;
   text-align: center;
   h3 {
     @include fontGeorgia(2.19em, 130%, 0.06em);
-    padding: 1.73em 0 1.65em 2px;
+    padding: 62px 0 58px 4px;
     color: $color-dark-l;
   }
 }
@@ -300,6 +294,7 @@ nav.header-navigation {
   flex-wrap: wrap;
   gap: 55px 118px;
   justify-content: center;
+  margin-bottom: 100px;
   li {
     height: 113px;
     @include fontGeorgia(20px, 115%, 0.06em);
@@ -314,13 +309,12 @@ nav.header-navigation {
 }
 //**********donation***********
 .donation {
-  height: 464px;
   background-color: $color-light-l;
 }
 .donation-content {
   width: 915px;
   margin: 0 auto;
-  padding: 5.1em 0 100px;
+  padding: 5.1em 0 101px;
   display: flex;
   color: $color-dark-l;
   justify-content: space-between;
@@ -375,14 +369,17 @@ footer {
   background: url(../../assets/images/noise_transparent@2x.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
-  height: 350px;
   padding-top: 40px;
   box-sizing: border-box;
 }
 .footer-content {
   display: flex;
   @include marginWidth();
-  height: 310px;
+  justify-content: space-between;
+}
+.footer-content-info {
+  width: 60%;
+  display: flex;
   justify-content: space-between;
 }
 .contacts,
@@ -416,5 +413,407 @@ footer {
   margin-left: -20px;
   div {
     margin-left: -2px;
+  }
+}
+/*********************************************************************************
+******************************************media***********************************
+
+**************768px************/
+@media (min-width: 768px) and (max-width: 1279px) {
+  body {
+    width: 100%;
+  }
+  header {
+    padding-top: 30px;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .logo {
+    padding: 0 0 0 30px;
+    width: 23.9%;
+  }
+  nav.header-navigation {
+    padding-right: 30px;
+    width: 57.6%;
+  }
+  .start-screen-content {
+    display: block;
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    .start-screen-content-box {
+      text-align: center;
+    }
+    .start-screen-content-w768 {
+      text-align: left;
+    }
+    div {
+      width: 460px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+    img {
+      width: 72.5vw;
+      margin: 0 0 -5px 0;
+      padding: 0 4% 0 0;
+    }
+    button.make-a-friend {
+      width: 207px;
+      height: 52px;
+      margin-bottom: 100px;
+    }
+  }
+  .start-screen-content-w768 {
+    text-align: left;
+  }
+  /***********about*********/
+  .about {
+    text-align: center;
+  }
+  .about-content {
+    width: 100%;
+    flex-direction: column;
+    width: 432px;
+    margin: 0 auto;
+    .about-the-scelter {
+      text-align: left;
+      margin: 80px auto;
+    }
+    img {
+      order: 1;
+      padding-bottom: 100px;
+      width: 68%;
+      margin: 0 auto;
+    }
+  }
+  /*******************our pets**********************/
+  .pets-content {
+    width: 100%;
+    padding: 0;
+    h3 {
+      padding: 80px 0 60px;
+    }
+  }
+  .slider {
+    margin: 0 auto;
+    width: 92%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    .disable-card {
+      display: none;
+    }
+    figure {
+      width: 270px;
+      height: 435px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .cards {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .get-to-know {
+    width: 260px;
+    height: 52px;
+  }
+  /*****************help**************/
+  .help-content {
+    width: 100%;
+  }
+  .help_list {
+    height: 449px;
+    width: 82%;
+    gap: 0;
+    margin: 0 auto 100px;
+    li {
+      width: 33%;
+    }
+  }
+  /*****************donation**************/
+  .donation-content {
+    flex-direction: column;
+    width: 67%;
+    .make-donation {
+      width: 360px;
+      margin: 0 auto;
+    }
+    .donation-dog {
+      order: 1;
+      width: 100%;
+      padding-top: 60px;
+    }
+  }
+  /*****************footer**************/
+  .footer-content {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .footer-content-info {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .footer-dog {
+    width: 39%;
+    margin: 65px 0 -4px;
+  }
+}
+/*******************************320px***********************/
+@media (max-width: 767px) {
+  /***************heder*************/
+  body {
+    width: 100%;
+  }
+  header {
+    padding-top: 30px;
+    justify-content: space-between;
+    height: 60px;
+    margin-right: 53px;
+    width: auto;
+    margin-left: 3%;
+    .burger {
+      display: block;
+    }
+    .burger:hover {
+      transform: rotate(90deg);
+      transition: 1s;
+    }
+    .line {
+      border-bottom: 2px solid $color-primary;
+      height: 10px;
+      width: 30px;
+    }
+    .logo {
+      width: 184px;
+      padding-right: 0;
+    }
+    .header-navigation {
+      width: 31px;
+      ul {
+        display: none;
+      }
+    }
+  }
+  .start-screen-content {
+    display: block;
+    width: auto;
+    text-align: right;
+    box-sizing: border-box;
+    margin: 0 3%;
+    .start-screen-content-box {
+      text-align: center;
+      width: 100%;
+    }
+    .start-screen-content-w768 {
+      text-align: center;
+      width: 100%;
+      h2 {
+        font-size: 25px;
+        width: 205px;
+        margin: 0 auto;
+      }
+      p {
+        width: 300px;
+        margin: 42px auto;
+      }
+    }
+    div {
+      width: 460px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+    img {
+      width: 72.5vw;
+      margin: 0 0 -5px 0;
+      padding: 0 4% 0 0;
+    }
+    button.make-a-friend {
+      width: 207px;
+      height: 52px;
+      margin-bottom: 100px;
+    }
+  }
+  .start-screen-content-w768 {
+    text-align: center;
+  }
+  /***********about*********/
+  .about-content {
+    width: auto;
+    flex-direction: column;
+    max-width: 430px;
+    margin: auto;
+    .about-the-scelter {
+      text-align: left;
+      margin: 0 5%;
+      h3 {
+        width: 292px;
+        font-size: 25px;
+        margin: 42px auto 25px;
+        padding: 0;
+        text-align: center;
+      }
+      p {
+        padding: 0 0 22px 0;
+      }
+    }
+    img {
+      order: 1;
+      padding-bottom: 42px;
+      width: 68%;
+      margin: 0 auto;
+    }
+  }
+  /*******************our pets**********************/
+  .pets-content {
+    width: auto;
+    margin: 0 3%;
+    padding: 0;
+    h3 {
+      font-size: 25px;
+      padding: 42px 0;
+      width: auto;
+    }
+  }
+  .slider {
+    margin: 0 auto;
+    width: 300px;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: 100%;
+    .disable-card {
+      display: none;
+    }
+    figure {
+      width: 270px;
+      height: 435px;
+      img {
+        width: 100%;
+      }
+    }
+    .button_arrow {
+      margin: 20px 0 0 0;
+    }
+  }
+  .left {
+    order: 1;
+  }
+  .right {
+    order: 2;
+  }
+  .cards {
+    width: 100%;
+    justify-content: space-around;
+    figure:nth-child(3) {
+      display: none;
+    }
+  }
+  .get-to-know {
+    width: 260px;
+    height: 52px;
+    margin: 42px 0;
+  }
+  /*****************help**************/
+  .help h3 {
+    font-size: 25px;
+    padding: 42px 0;
+  }
+  .help-content {
+    width: 100%;
+  }
+  .help_list {
+    width: 82%;
+    gap: 0;
+    margin: 0 auto;
+    justify-content: left;
+    li {
+      width: 49%;
+      margin-bottom: 30px;
+      font-size: 15px;
+      img {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  /*****************donation**************/
+  .donation-content {
+    flex-direction: column;
+    width: auto;
+    margin: 0 6.2%;
+    padding: 0;
+    .make-donation {
+      margin: 0 auto;
+      width: auto;
+      h3 {
+        text-align: center;
+        font-size: 25px;
+        padding: 42px 0 20px;
+        width: 220px;
+        margin: 0 auto;
+      }
+      p {
+        text-align: center;
+      }
+      a {
+        width: 281px;
+        margin: 20px auto;
+        p {
+          font-size: 15px;
+        }
+      }
+      .make-donation-info {
+        text-align: justify;
+        max-width: 380px;
+      }
+    }
+    .donation-dog {
+      order: 1;
+      margin: 0 9.3%;
+      padding: 42px 0;
+    }
+  }
+  /*****************footer**************/
+  footer {
+    padding-top: 30px;
+  }
+  .footer-content {
+    width: auto;
+    display: block;
+    text-align: center;
+  }
+  .footer-content-info {
+    width: auto;
+    margin: 0 6.2%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .contacts,
+  .location {
+    a {
+      margin: 0 auto;
+    }
+    h3 {
+      font-size: 25px;
+      text-align: center;
+      padding: 0;
+      width: 290px;
+    }
+    width: 300px;
+    margin: 0 auto 40px;
+  }
+  .footer-dog {
+    width: 70%;
+    margin-bottom: -4px;
+    max-width: 300px;
   }
 }
