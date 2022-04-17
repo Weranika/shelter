@@ -10,17 +10,23 @@
 <body>
     <article class="start-screen" id="start-screen">
         <header>
-            <div class="logo" id="start-screen">
+            <div class="logo" id="start-screen nonshow">
                 <h1><a href="#start-screen">Cozy House</a></h1>
                 <div class="subtitle">Shelter for pets in Boston</div>
             </div>
-            <nav class="header-navigation">
-                <div class="burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div> 
-                <ul>
+            <nav id="navigation-bar" class="header-navigation">
+                <div class="navigation-header">
+                    <div id="logo" class="logo nonshow" id="start-screen">
+                        <h1><a href="#start-screen">Cozy House</a></h1>
+                        <div class="subtitle">Shelter for pets in Boston</div>
+                    </div>
+                    <div class="burger" onclick="burgerNavigation(this)">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>                
+                <ul id="navigation" class="navigation">
                     <li><a href="#start-screen" class="active">About the shelter</a></li>
                     <li><a href="../pets/index.html">Our pets</a></li>
                     <li><a href="#help">Help the shelter</a></li>
@@ -192,5 +198,6 @@
             <img class="footer-dog" src="../../assets/images/footer-puppy.png" alt="footer-puppy">
         </div>       
     </footer>    
+    <script src="script.js"></script>
 </body>
 </html>
