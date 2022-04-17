@@ -19,14 +19,21 @@ body {
 }
 
 header {
-  height: 7.5em;
+  height: 120px;
   width: 1280px;
+  padding: 29px 40px 32px;
+  display: flex;
   position: fixed;
   background: white;
+  margin: 0 auto;
+  width: 1200px;
+  height: 60px;
+}
+header .burger {
+  display: none;
 }
 
 .header-content {
-  padding-top: 1.7em;
   height: 60px;
   display: flex;
   margin: 0 auto;
@@ -35,8 +42,8 @@ header {
 }
 
 .logo {
-  padding-right: 47.15%;
-  padding-top: 7px;
+  padding-top: 2px;
+  padding-right: 47.1%;
   width: 16%;
 }
 
@@ -59,26 +66,27 @@ h1 a:hover {
   color: #292929;
 }
 
-nav {
+nav.header-navigation {
   width: 27.7em;
+  padding-top: 1.8%;
 }
-nav ul {
+nav.header-navigation ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  font: 400 0.94em "Arial";
+  font: 400 15px "Arial";
   line-height: 1;
   letter-spacing: 1;
   padding: 0;
 }
-nav a {
+nav.header-navigation a {
   color: #545454;
   text-decoration: none;
 }
-nav a:hover {
+nav.header-navigation a:hover {
   color: #292929;
 }
-nav a.active {
+nav.header-navigation a.active {
   color: #292929;
   border-bottom: 3px #f1cdb3 solid;
   padding-bottom: 3px;
@@ -192,7 +200,6 @@ h2 {
 
 footer {
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
-  height: 350px;
   padding-top: 40px;
   box-sizing: border-box;
 }
@@ -201,7 +208,12 @@ footer {
   display: flex;
   margin: 0 auto;
   width: 1200px;
-  height: 310px;
+  justify-content: space-between;
+}
+
+.footer-content-info {
+  width: 60%;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -247,6 +259,279 @@ footer {
 }
 .location div {
   margin-left: -2px;
+}
+
+/*********************************************************************************
+******************************************media***********************************
+
+**************768px************/
+@media (min-width: 768px) and (max-width: 1279px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    padding: 29px 30px 32px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1220px;
+    height: 120px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    width: 187px;
+    padding-right: 0;
+  }
+
+  nav.header-navigation {
+    width: 62%;
+  }
+
+  .start-screen-content {
+    display: block;
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+  }
+  .start-screen-content .start-screen-content-box {
+    text-align: center;
+  }
+  .start-screen-content .start-screen-content-w768 {
+    text-align: left;
+  }
+  .start-screen-content div {
+    width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  .start-screen-content img {
+    width: 72.5vw;
+    margin: 0 0 -5px 0;
+    padding: 0 4% 0 0;
+  }
+  .start-screen-content button.make-a-friend {
+    width: 207px;
+    height: 52px;
+    margin-bottom: 100px;
+  }
+
+  .start-screen-content-w768 {
+    text-align: left;
+  }
+
+  main {
+    padding-top: 120px;
+    width: 100%;
+  }
+
+  h2 {
+    padding: 80px 0 30px;
+    font-size: 35px;
+    width: 100%;
+  }
+
+  .pets-conteiner {
+    width: 100%;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 800px;
+    min-width: 708px;
+    justify-content: space-evenly;
+    height: 1365px;
+    overflow: hidden;
+    margin: 0 auto;
+    gap: 0;
+  }
+  .cards-container .card {
+    margin-bottom: 30px;
+  }
+
+  /*****************footer**************/
+  .footer-content {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-content-info {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .footer-dog {
+    width: 39%;
+    margin: 65px 0 -4px;
+  }
+}
+/*******************************320px***********************/
+@media (max-width: 767px) {
+  /***************heder*************/
+  body {
+    width: 100%;
+  }
+
+  header {
+    padding-top: 30px;
+    justify-content: space-between;
+    height: 60px;
+    margin-right: 53px;
+    width: auto;
+    margin-left: 3%;
+  }
+  header .burger {
+    display: block;
+    transition: 0.5s;
+  }
+  header .line {
+    border-bottom: 2px solid #f1cdb3;
+    height: 10px;
+    width: 30px;
+  }
+  header .logo {
+    width: 184px;
+    padding-right: 0;
+  }
+  header .header-navigation {
+    width: 31px;
+  }
+  header .header-navigation .navigation {
+    flex-direction: column;
+    display: none;
+  }
+
+  .start-screen-content {
+    display: block;
+    width: auto;
+    text-align: right;
+    box-sizing: border-box;
+    margin: 0 6%;
+  }
+  .start-screen-content .start-screen-content-box {
+    text-align: center;
+    width: auto;
+  }
+  .start-screen-content .start-screen-content-w768 {
+    text-align: center;
+    width: auto;
+  }
+  .start-screen-content .start-screen-content-w768 p {
+    width: auto;
+    max-width: 460px;
+    min-width: 300px;
+    margin: 42px auto;
+  }
+  .start-screen-content .start-screen-content-w768 h2 {
+    font-size: 25px;
+    width: 205px;
+    margin: 0 auto;
+  }
+  .start-screen-content div {
+    width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  .start-screen-content img {
+    width: 72.5vw;
+    margin: 0 0 -5px 0;
+    padding: 0 4% 0 0;
+  }
+  .start-screen-content button.make-a-friend {
+    width: 207px;
+    height: 52px;
+    margin-bottom: 100px;
+  }
+
+  .start-screen-content-w768 {
+    text-align: center;
+  }
+
+  /*****************footer**************/
+  footer {
+    padding-top: 30px;
+  }
+
+  .footer-content {
+    width: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-content-info {
+    width: auto;
+    margin: 0 6.2%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .contacts,
+.location {
+    width: 300px;
+    margin: 0 auto 40px;
+  }
+  .contacts a,
+.location a {
+    margin: 0 auto;
+  }
+  .contacts h3,
+.location h3 {
+    font-size: 25px;
+    text-align: center;
+    padding: 0;
+    width: 290px;
+  }
+
+  .footer-dog {
+    width: 70%;
+    margin-bottom: -4px;
+    max-width: 300px;
+  }
+}
+.header-navigation ul.nonshow,
+.header-navigation div.nonshow {
+  display: none;
+}
+
+header .change {
+  background-color: #292929;
+  width: 320px;
+  height: 823px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0;
+}
+header .change .navigation-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 31px 54px 158px 10px;
+}
+header .change .navigation-header a {
+  color: #f1cdb3;
+}
+header .change .burger {
+  padding-top: 6px;
+  transition: 0.5s;
+}
+header .change ul li {
+  font: 400 32px "Arial";
+  line-height: 160%;
+  letter-spacing: 0;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.rotate {
+  transform: rotate(90deg);
 }
 
 /*# sourceMappingURL=style.css.map */
