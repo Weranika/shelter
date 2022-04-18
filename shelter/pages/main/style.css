@@ -9,7 +9,7 @@
   font-style: normal;
 }
 body {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -207,6 +207,16 @@ nav.header-navigation a.active {
   cursor: pointer;
 }
 
+.right {
+  position: relative;
+  left: 7px;
+}
+
+.left {
+  position: relative;
+  left: -6px;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -292,7 +302,7 @@ nav.header-navigation a.active {
   font: 400 2.19em "Georgia";
   line-height: 130%;
   letter-spacing: 0.06em;
-  padding: 62px 0 58px 4px;
+  padding: 81px 0 58px 1px;
   color: #545454;
 }
 
@@ -331,7 +341,6 @@ nav.header-navigation a.active {
   justify-content: space-between;
 }
 .donation-content .donation-dog {
-  height: 100%;
   padding-top: 10px;
 }
 
@@ -469,7 +478,7 @@ footer {
   }
 
   nav.header-navigation {
-    padding-right: 30px;
+    padding: 20px 30px 0 0;
     width: 57.6%;
   }
 
@@ -478,6 +487,7 @@ footer {
     width: 100%;
     text-align: right;
     box-sizing: border-box;
+    padding-top: 61px;
   }
   .start-screen-content .start-screen-content-box {
     text-align: center;
@@ -492,7 +502,7 @@ footer {
     text-align: center;
   }
   .start-screen-content img {
-    width: 72.5vw;
+    width: 74.3vw;
     margin: 0 0 -5px 0;
     padding: 0 4% 0 0;
   }
@@ -519,12 +529,12 @@ footer {
   }
   .about-content .about-the-scelter {
     text-align: left;
-    margin: 80px auto;
+    margin: 66px auto 79px;
   }
   .about-content img {
     order: 1;
-    padding-bottom: 100px;
-    width: 68%;
+    padding-bottom: 99px;
+    width: 70%;
     margin: 0 auto;
   }
 
@@ -534,17 +544,15 @@ footer {
     padding: 0;
   }
   .pets-content h3 {
-    padding: 80px 0 60px;
+    padding: 80px 0 59px 2px;
   }
 
   .slider {
     margin: 0 auto;
-    width: 92%;
+    width: 80%;
     justify-content: space-around;
     box-sizing: border-box;
-  }
-  .slider .disable-card {
-    display: none;
+    min-width: 720px;
   }
   .slider figure {
     width: 270px;
@@ -555,8 +563,11 @@ footer {
   }
 
   .cards {
-    width: 90%;
-    justify-content: space-around;
+    width: 579px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 435px;
   }
 
   .get-to-know {
@@ -568,12 +579,15 @@ footer {
   .help-content {
     width: 100%;
   }
+  .help-content h3 {
+    padding: 81px 0 58px 2px;
+  }
 
   .help_list {
-    height: 449px;
-    width: 82%;
+    height: 504px;
+    width: 91%;
     gap: 0;
-    margin: 0 auto 100px;
+    margin: 0 auto 45px;
   }
   .help_list li {
     width: 33%;
@@ -583,18 +597,24 @@ footer {
   .donation-content {
     flex-direction: column;
     width: 67%;
+    padding: 81px 0 101px;
   }
   .donation-content .make-donation {
-    width: 360px;
+    width: 380px;
     margin: 0 auto;
   }
   .donation-content .donation-dog {
     order: 1;
-    width: 100%;
-    padding-top: 60px;
+    margin: 0 auto;
+    width: 98%;
+    padding-top: 59px;
   }
 
   /*****************footer**************/
+  footer {
+    padding-top: 14px;
+  }
+
   .footer-content {
     width: 100%;
     display: block;
@@ -603,10 +623,15 @@ footer {
 
   .footer-content-info {
     margin: 0 auto;
-    width: 100%;
+    width: 640px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: left;
+  }
+
+  .contacts,
+.location {
+    width: 300px;
   }
 
   .footer-dog {
@@ -637,6 +662,7 @@ footer {
     border-bottom: 2px solid #f1cdb3;
     height: 10px;
     width: 30px;
+    box-sizing: border-box;
   }
   header .logo {
     width: 184px;
@@ -644,6 +670,7 @@ footer {
   }
   header .header-navigation {
     width: 31px;
+    padding-top: 11px;
   }
   header .header-navigation .navigation {
     flex-direction: column;
@@ -655,7 +682,8 @@ footer {
     width: auto;
     text-align: right;
     box-sizing: border-box;
-    margin: 0 6%;
+    margin: 0 3%;
+    padding-top: 60px;
   }
   .start-screen-content .start-screen-content-box {
     text-align: center;
@@ -673,8 +701,9 @@ footer {
   }
   .start-screen-content .start-screen-content-w768 h2 {
     font-size: 25px;
-    width: 205px;
     margin: 0 auto;
+    width: 70%;
+    letter-spacing: 0.06em;
   }
   .start-screen-content div {
     width: 460px;
@@ -683,14 +712,14 @@ footer {
     text-align: center;
   }
   .start-screen-content img {
-    width: 72.5vw;
-    margin: 0 0 -5px 0;
-    padding: 0 4% 0 0;
+    width: 82vw;
+    margin: 0 0 -4px 0;
+    padding: 0;
   }
   .start-screen-content button.make-a-friend {
     width: 207px;
     height: 52px;
-    margin-bottom: 100px;
+    margin-bottom: 103px;
   }
 
   .start-screen-content-w768 {
@@ -705,13 +734,13 @@ footer {
     margin: auto;
   }
   .about-content .about-the-scelter {
-    text-align: left;
-    margin: 0 5%;
+    text-align: justify;
+    margin: 0 7.5%;
   }
   .about-content .about-the-scelter h3 {
-    width: 292px;
+    width: 268px;
     font-size: 25px;
-    margin: 42px auto 25px;
+    margin: 41px auto 25px;
     padding: 0;
     text-align: center;
   }
@@ -721,8 +750,8 @@ footer {
   .about-content img {
     order: 1;
     padding-bottom: 42px;
-    width: 68%;
-    margin: 0 auto;
+    width: 82.2%;
+    margin: 19px auto 0px;
   }
 
   /*******************our pets**********************/
@@ -768,11 +797,11 @@ footer {
   }
 
   .cards {
-    width: 100%;
+    width: auto;
     justify-content: space-around;
-  }
-  .cards figure:nth-child(3) {
-    display: none;
+    flex-wrap: wrap;
+    height: 435px;
+    overflow: hidden;
   }
 
   .get-to-know {
@@ -789,21 +818,23 @@ footer {
 
   .help-content {
     width: 100%;
+    padding-bottom: 11px;
   }
 
   .help_list {
-    width: 82%;
-    gap: 0;
-    margin: 0 auto;
+    width: 95%;
+    gap: 0 5.5%;
+    margin: 0px auto;
     justify-content: left;
   }
   .help_list li {
-    width: 49%;
-    margin-bottom: 30px;
+    width: 47%;
+    margin-bottom: 4px;
     font-size: 15px;
   }
   .help_list li img {
-    padding-bottom: 20px;
+    padding-bottom: 16px;
+    width: 50px;
   }
 
   /*****************donation**************/
@@ -820,19 +851,25 @@ footer {
   .donation-content .make-donation h3 {
     text-align: center;
     font-size: 25px;
-    padding: 42px 0 20px;
+    padding: 42px 0 23px;
     width: 220px;
     margin: 0 auto;
   }
   .donation-content .make-donation p {
     text-align: center;
+    letter-spacing: 0;
   }
   .donation-content .make-donation a {
     width: 281px;
-    margin: 20px auto;
+    margin: 23px auto 21px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    justify-content: space-between;
   }
   .donation-content .make-donation a p {
     font-size: 15px;
+    width: 207px;
+    letter-spacing: 0.06em;
   }
   .donation-content .make-donation .make-donation-info {
     text-align: justify;
@@ -840,8 +877,8 @@ footer {
   }
   .donation-content .donation-dog {
     order: 1;
-    margin: 0 9.3%;
-    padding: 42px 0;
+    margin: 0 4%;
+    padding: 42px 0 43px;
   }
 
   /*****************footer**************/
@@ -857,15 +894,16 @@ footer {
 
   .footer-content-info {
     width: auto;
-    margin: 0 6.2%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding: 0px 3.6%;
   }
 
   .contacts,
 .location {
-    width: 300px;
+    width: auto;
     margin: 0 auto 40px;
   }
   .contacts a,
@@ -877,15 +915,29 @@ footer {
     font-size: 25px;
     text-align: center;
     padding: 0;
-    width: 290px;
+    width: auto;
+  }
+
+  .contacts .phone img {
+    padding-left: 5px;
+  }
+
+  .location h3 {
+    width: 97%;
+    padding-left: 2px;
+  }
+
+  .location a {
+    padding-top: 46px;
   }
 
   .footer-dog {
-    width: 70%;
+    width: 82%;
     margin-bottom: -4px;
     max-width: 300px;
   }
 }
+/******************************************/
 .header-navigation ul.nonshow,
 .header-navigation div.nonshow {
   display: none;
@@ -908,8 +960,11 @@ header .change .navigation-header {
 header .change .navigation-header a {
   color: #f1cdb3;
 }
+header .change .navigation-header a:hover {
+  color: #fafafa;
+}
 header .change .burger {
-  padding-top: 6px;
+  margin: -4px 14px 0 0;
   transition: 0.5s;
 }
 header .change ul li {

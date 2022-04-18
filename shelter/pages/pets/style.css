@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   height: 100%;
 }
@@ -171,6 +171,7 @@ h2 {
   justify-content: space-between;
 }
 .pets-navigation button {
+  background: #f6f6f6;
   border-radius: 100px;
   width: 52px;
   height: 52px;
@@ -178,22 +179,19 @@ h2 {
   line-height: 115%;
   letter-spacing: 0.06em;
 }
-
-.button_navigator_inactive {
+.pets-navigation .button_navigator_inactive {
   border: 2px solid #cdcdcd;
 }
-
-.button_navigator_active {
+.pets-navigation .button_navigator_active {
   background: #f1cdb3;
   border: none;
 }
-
-.button_navigator {
+.pets-navigation .button_navigator {
   border: 2px solid #f1cdb3;
   color: #292929;
   cursor: pointer;
 }
-.button_navigator:hover {
+.pets-navigation .button_navigator:hover {
   background: #fddcc4;
   border: none;
 }
@@ -268,13 +266,13 @@ footer {
 @media (min-width: 768px) and (max-width: 1279px) {
   body {
     width: 100%;
+    max-width: 1279px;
   }
 
   header {
     padding: 29px 30px 32px;
     justify-content: space-between;
     width: 100%;
-    max-width: 1220px;
     height: 120px;
     box-sizing: border-box;
   }
@@ -285,7 +283,8 @@ footer {
   }
 
   nav.header-navigation {
-    width: 62%;
+    width: 62.7%;
+    padding-top: 22px;
   }
 
   .start-screen-content {
@@ -325,11 +324,11 @@ footer {
     padding-top: 120px;
     width: 100%;
   }
-
-  h2 {
-    padding: 80px 0 30px;
+  main h2 {
+    padding: 81px 0 0 1px;
     font-size: 35px;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .pets-conteiner {
@@ -339,19 +338,28 @@ footer {
   .cards-container {
     flex-wrap: wrap;
     display: flex;
-    max-width: 800px;
-    min-width: 708px;
+    width: 580px;
     justify-content: space-evenly;
-    height: 1365px;
+    height: 1395px;
+    padding-top: 29px;
     overflow: hidden;
     margin: 0 auto;
     gap: 0;
+    justify-content: space-between;
   }
   .cards-container .card {
     margin-bottom: 30px;
   }
 
+  .pets-navigation {
+    padding: 10px 0 76px;
+  }
+
   /*****************footer**************/
+  footer {
+    padding-top: 14px;
+  }
+
   .footer-content {
     width: 100%;
     display: block;
@@ -360,10 +368,15 @@ footer {
 
   .footer-content-info {
     margin: 0 auto;
-    width: 100%;
+    width: 640px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: left;
+  }
+
+  .contacts,
+.location {
+    width: 300px;
   }
 
   .footer-dog {
@@ -379,24 +392,26 @@ footer {
   }
 
   header {
-    padding-top: 30px;
     justify-content: space-between;
-    height: 60px;
-    margin-right: 53px;
-    width: auto;
-    margin-left: 3%;
+    height: 120px;
+    width: 100%;
+    max-width: 767px;
+    box-sizing: border-box;
+    padding: 30px 50px 30px 3%;
   }
   header .burger {
     display: block;
     transition: 0.5s;
+    margin: 6px 0px 0 -5px;
   }
   header .line {
-    border-bottom: 2px solid #f1cdb3;
+    border-bottom: 2px solid black;
     height: 10px;
     width: 30px;
+    box-sizing: border-box;
   }
   header .logo {
-    width: 184px;
+    width: 186px;
     padding-right: 0;
   }
   header .header-navigation {
@@ -454,6 +469,44 @@ footer {
     text-align: center;
   }
 
+  main {
+    padding-top: 120px;
+    width: 100%;
+  }
+
+  h2 {
+    padding: 42px 0 0 0;
+    font-size: 35px;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .pets-conteiner {
+    width: 100%;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+    display: flex;
+    min-width: 300px;
+    max-width: 500px;
+    justify-content: space-evenly;
+    height: 1395px;
+    padding-top: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 42px;
+    gap: 0;
+  }
+  .cards-container .card {
+    margin-bottom: 30px;
+  }
+
+  .pets-navigation {
+    padding: 12px 0 42px;
+    width: 300px;
+  }
+
   /*****************footer**************/
   footer {
     padding-top: 30px;
@@ -467,15 +520,16 @@ footer {
 
   .footer-content-info {
     width: auto;
-    margin: 0 6.2%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding: 0px 3.6%;
   }
 
   .contacts,
 .location {
-    width: 300px;
+    width: auto;
     margin: 0 auto 40px;
   }
   .contacts a,
@@ -487,15 +541,29 @@ footer {
     font-size: 25px;
     text-align: center;
     padding: 0;
-    width: 290px;
+    width: auto;
+  }
+
+  .contacts .phone img {
+    padding-left: 5px;
+  }
+
+  .location h3 {
+    width: 97%;
+    padding-left: 2px;
+  }
+
+  .location a {
+    padding-top: 46px;
   }
 
   .footer-dog {
-    width: 70%;
+    width: 82%;
     margin-bottom: -4px;
     max-width: 300px;
   }
 }
+/*********************************************************/
 .header-navigation ul.nonshow,
 .header-navigation div.nonshow {
   display: none;
@@ -515,12 +583,21 @@ header .change .navigation-header {
   justify-content: space-between;
   margin: 31px 54px 158px 10px;
 }
+header .change .navigation-header .subtitle {
+  color: white;
+}
 header .change .navigation-header a {
   color: #f1cdb3;
 }
+header .change .navigation-header a:hover {
+  color: #fafafa;
+}
 header .change .burger {
-  padding-top: 6px;
+  margin: -4px 14px 0 0;
   transition: 0.5s;
+}
+header .change .burger .line {
+  border-bottom: 2px solid #f1cdb3;
 }
 header .change ul li {
   font: 400 32px "Arial";
@@ -528,6 +605,15 @@ header .change ul li {
   letter-spacing: 0;
   margin: 0 auto 40px;
   text-align: center;
+}
+header .change ul li a {
+  color: #cdcdcd;
+}
+header .change ul li a:hover {
+  color: #fafafa;
+}
+header .change ul li .active {
+  color: #fafafa;
 }
 
 .rotate {
