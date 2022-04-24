@@ -50,10 +50,9 @@ $color-dark-3xl: rgba(41, 41, 41, 1);
 html {
   height: $page-height;
 }
-body {
+.wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  height: $page-height;
 }
 
 //*********header***************
@@ -395,26 +394,34 @@ footer {
     .burger {
       display: block;
       transition: 0.5s;
-      margin: 6px 0px 0 -5px;
+      position: absolute;
+      top: 45px;
+      right: 39px;
+      z-index: 3;
     }
+    
     .line {
-      border-bottom: 2px solid rgba(0, 0, 0, 1);
+      border-bottom: 2px solid $color-primary;
       height: 10px;
       width: 30px;
       box-sizing: border-box;
     }
+    
     .logo {
       width: 186px;
       padding-right: 0;
     }
+    
     .header-navigation {
       width: 31px;
+      padding-top: 11px;
+    
       .navigation {
         flex-direction: column;
         display: none;
       }
     }
-  }
+    }
   .start-screen-content {
     display: block;
     width: auto;
@@ -555,58 +562,157 @@ footer {
   }
 }
 /*********************************************************/
+/******************************************/
 .header-navigation ul.nonshow,
-.header-navigation div.nonshow {
+.header-navigation div.nonshow,
+.popup-background.nonshow {
   display: none;
 }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 0px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 320px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0;
+    width: 320px;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 0;
+  }
+}
+
 header {
-  .change {
+  .change {    
     background-color: $color-dark-3xl;
     width: 320px;
     height: 823px;
     position: absolute;
+    z-index: 2;
     top: 0px;
     right: 0px;
     padding: 0;
+    animation-duration: 1s;
+    animation-name: slidein;
+    overflow: hidden;
+    white-space: nowrap;
+    .subtitle {
+      color: $color-light-xl;
+    }    
+    a {
+      color: $color-primary;
+    
+      &:hover {
+        color: $color-light-s;
+      }
+    }
     .navigation-header {
       display: flex;
       justify-content: space-between;
       margin: 31px 54px 158px 10px;
-      .subtitle {
-        color: $color-light-xl;
-      }
       a {
         color: $color-primary;
+
         &:hover {
           color: $color-light-s;
         }
       }
     }
+
     .burger {
-      margin: -4px 14px 0 0;
+      position: absolute;
+      top: 45px;
+      right: 39px;
       transition: 0.5s;
-      .line {
-        border-bottom: 2px solid $color-primary;
-      }
+      z-index: 3;
     }
+
     ul {
       li {
         @include fontArial(32px, 160%, 0);
         margin: 0 auto 40px;
         text-align: center;
         a {
-          color: $color-dark-s;
+          color: $color-dark-s;        
           &:hover {
             color: $color-light-s;
           }
-        }   
+        }
         .active {
           color: $color-light-s;
         }
       }
     }
   }
+
+  .slideout {
+    overflow: hidden;
+    background-color: $color-dark-3xl;
+    width: 0;
+    height: 823px;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    padding: 0;
+    animation-duration: 1s;
+    animation-name: slideout;
+    white-space: nowrap;
+
+    .navigation-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 31px 54px 158px 10px;
+
+      a {
+        color: $color-primary;
+
+        &:hover {
+          color: $color-light-s;
+        }
+      }
+    }
+
+    .burger {
+      position: absolute;
+      top: 45px;
+      right: 39px;
+      transition: 0.5s;
+      z-index: 3;
+    }
+
+    ul {
+      li {
+        @include fontArial(32px, 160%, 0);
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+    }
+  }
+
+  .rotate {
+    transform: rotate(90deg);
+  }
 }
-.rotate {
-  transform: rotate(90deg);
+#popap {
+  display: none;
+}
+.popup-background {
+  background: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -1,19 +1,17 @@
-// import { json } from "../../js/json.js";
-// json = require('../../js/json.js');
-console.log(1);
-console.log(json);
 function burgerNavigation(elem) {
     let navigationBar = document.getElementById("navigation-bar");
     let popup = document.getElementById("popup-background");
-    let navigation = document.getElementById('navigation');
+    let navigation = document.getElementById('navigation');    
 
     //navigationBar.classList.toggle("change"); 
     if (navigationBar.classList.contains("change")) {
         navigationBar.classList.remove("change");
         navigationBar.classList.add("slideout");
+        document.querySelector('header').style.position = 'relative';
     } else {
         navigationBar.classList.remove("slideout");
         navigationBar.classList.add("change");
+        document.querySelector('header').style.position = 'relative';
     }
     popup.classList.toggle("nonshow");   
     document.getElementById("logo").classList.toggle("nonshow");
@@ -40,6 +38,10 @@ function handler1() {
         navigation.style.display = 'block';
     }
 }
+
+document.getElementById("ourPets").addEventListener("click", handler2);
+document.getElementById("helpNav").addEventListener("click", handler2);
+document.getElementById("contactsNav").addEventListener("click", handler2);
 document.getElementById("aboutTheScelter").addEventListener("click", handler2);
 function handler2() {
     let navigationBar = document.getElementById("navigation-bar");    
@@ -61,4 +63,3 @@ function handler2() {
         navigation.style.display = 'block';
     }
 }
-

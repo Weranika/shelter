@@ -12,10 +12,9 @@ html {
   height: 100%;
 }
 
-body {
+.wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  height: 100%;
 }
 
 header {
@@ -402,10 +401,13 @@ footer {
   header .burger {
     display: block;
     transition: 0.5s;
-    margin: 6px 0px 0 -5px;
+    position: absolute;
+    top: 45px;
+    right: 39px;
+    z-index: 3;
   }
   header .line {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #f1cdb3;
     height: 10px;
     width: 30px;
     box-sizing: border-box;
@@ -416,6 +418,7 @@ footer {
   }
   header .header-navigation {
     width: 31px;
+    padding-top: 11px;
   }
   header .header-navigation .navigation {
     flex-direction: column;
@@ -564,27 +567,60 @@ footer {
   }
 }
 /*********************************************************/
+/******************************************/
 .header-navigation ul.nonshow,
-.header-navigation div.nonshow {
+.header-navigation div.nonshow,
+.popup-background.nonshow {
   display: none;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 0px;
+  }
+  to {
+    margin-left: 0%;
+    width: 320px;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-left: 0;
+    width: 320px;
+  }
+  to {
+    margin-left: 100%;
+    width: 0;
+  }
+}
 header .change {
   background-color: #292929;
   width: 320px;
   height: 823px;
   position: absolute;
+  z-index: 2;
   top: 0px;
   right: 0px;
   padding: 0;
+  animation-duration: 1s;
+  animation-name: slidein;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header .change .subtitle {
+  color: white;
+}
+header .change a {
+  color: #f1cdb3;
+}
+header .change a:hover {
+  color: #fafafa;
 }
 header .change .navigation-header {
   display: flex;
   justify-content: space-between;
   margin: 31px 54px 158px 10px;
-}
-header .change .navigation-header .subtitle {
-  color: white;
 }
 header .change .navigation-header a {
   color: #f1cdb3;
@@ -593,11 +629,11 @@ header .change .navigation-header a:hover {
   color: #fafafa;
 }
 header .change .burger {
-  margin: -4px 14px 0 0;
+  position: absolute;
+  top: 45px;
+  right: 39px;
   transition: 0.5s;
-}
-header .change .burger .line {
-  border-bottom: 2px solid #f1cdb3;
+  z-index: 3;
 }
 header .change ul li {
   font: 400 32px "Arial";
@@ -615,9 +651,60 @@ header .change ul li a:hover {
 header .change ul li .active {
   color: #fafafa;
 }
-
-.rotate {
+header .slideout {
+  overflow: hidden;
+  background-color: #292929;
+  width: 0;
+  height: 823px;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  right: 0px;
+  padding: 0;
+  animation-duration: 1s;
+  animation-name: slideout;
+  white-space: nowrap;
+}
+header .slideout .navigation-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 31px 54px 158px 10px;
+}
+header .slideout .navigation-header a {
+  color: #f1cdb3;
+}
+header .slideout .navigation-header a:hover {
+  color: #fafafa;
+}
+header .slideout .burger {
+  position: absolute;
+  top: 45px;
+  right: 39px;
+  transition: 0.5s;
+  z-index: 3;
+}
+header .slideout ul li {
+  font: 400 32px "Arial";
+  line-height: 160%;
+  letter-spacing: 0;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+header .rotate {
   transform: rotate(90deg);
+}
+
+#popap {
+  display: none;
+}
+
+.popup-background {
+  background: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
