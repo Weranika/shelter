@@ -181,7 +181,7 @@ h2 {
   line-height: 115%;
   letter-spacing: 0.06em;
 }
-.pets-navigation .button_navigator_inactive {
+.pets-navigation [disabled] {
   border: 2px solid #cdcdcd;
 }
 .pets-navigation .button_navigator_active {

@@ -1,8 +1,25 @@
 let figureAllItems = showed48Items([...json], 8);
-let itemsOnPage = 8;
+let itemsOnPage = numerOfCardsOnPage();
 let indexOfFirstElem = 0;
-let indexOfCurentElem = 0;
-createFirstPage(figureAllItems, itemsOnPage, indexOfFirstElem);
+let numberOfPages = figureAllItems.length / itemsOnPage;
+createPage(figureAllItems, itemsOnPage, indexOfFirstElem);
+let pageNumber = document.getElementById('pageNumber');
+let buttonNavigatorHome = document.getElementById('buttonNavigatorHome');
+let buttonNavigatorPrevious = document.getElementById('buttonNavigatorPrevious');
+let buttonNavigatorNext = document.getElementById('buttonNavigatorNext');
+let buttonNavigatorLast = document.getElementById('buttonNavigatorLast');
+
+
+function numerOfCardsOnPage() {
+    const windowInnerWidth = document.documentElement.clientWidth;
+    if (windowInnerWidth >= 1280) {
+        return 8;
+    } else if (windowInnerWidth >= 768) {
+        return 6;
+    } else {
+        return 3;
+    }        
+}
 
 function showed48Items(jsonList, col) {
     let items48 = [];   
@@ -24,34 +41,104 @@ function getRandom8(list, col) {
     return showed8Items;
 }
 
-function createFirstPage(figureAllItems, itemsOnPage, indexOfFirstElem) {    
-    let page = figureAllItems.slice(indexOfFirstElem, itemsOnPage);
+function createPage(figureAllItems, itemsOnPage, indexOfFirstElem) { 
+    let indexOfLast = indexOfFirstElem + itemsOnPage;
+    let page = figureAllItems.slice(indexOfFirstElem, indexOfLast);
     cards.innerHTML = '';
     page.forEach((elem) => cards.append(createFigure(elem)));
 }
 
-function buttonNavigatorHome(elem) {
-    console.log('first');
-    if (indexOfCurentElem > 1) {
-        elem.removeAttribute("disabled");
+function NavigatorHome(elem) {
+    console.log('first');     
+    indexOfFirstElem = 0;
+    createPage(figureAllItems, itemsOnPage, indexOfFirstElem);    
+    pageNumber.innerHTML = 1;
+    buttonNavigatorHome.setAttribute("disabled", "disabled");
+    buttonNavigatorHome.classList.remove("button_navigator");
+
+    buttonNavigatorPrevious.setAttribute("disabled", "disabled");
+    buttonNavigatorPrevious.classList.remove("button_navigator");
+
+    buttonNavigatorNext.removeAttribute("disabled");
+    buttonNavigatorNext.classList.add("button_navigator");
+
+    buttonNavigatorLast.removeAttribute("disabled");
+    buttonNavigatorLast.classList.add("button_navigator");
+}
+
+function NavigatorPrevious(elem) {
+    console.log('prev');    
+    indexOfFirstElem -= itemsOnPage;  
+    
+    createPage(figureAllItems, itemsOnPage, indexOfFirstElem);
+
+    pageNumber.innerHTML = +pageNumber.innerHTML - 1;
+
+    if (pageNumber.innerHTML == 1) {
+            buttonNavigatorPrevious.setAttribute("disabled", "disabled");
+            buttonNavigatorPrevious.classList.remove("button_navigator");
+
+            buttonNavigatorHome.setAttribute("disabled", "disabled");
+            buttonNavigatorHome.classList.remove("button_navigator");
+    }
+    if (pageNumber.innerHTML == numberOfPages - 1) {
+        buttonNavigatorNext.removeAttribute("disabled");
+        buttonNavigatorNext.classList.add("button_navigator");
+
+        buttonNavigatorLast.removeAttribute("disabled");
+        buttonNavigatorLast.classList.add("button_navigator");
     }
 }
 
-function buttonNavigatorPrevious(elem) {
-    console.log('prev');
-    if (indexOfCurentElem > 1) {
-        elem.removeAttribute("disabled");
-    }
-}
-
-function buttonNavigatorNext() {
+function NavigatorNext() {
     console.log('next');
     // выбрать элементы для след страницы
-    // 
+    // обновить указатель
+    // изменит номер страницы
+    // сделать активной кнопку предыдущей и первой
+    // отрисовать
+    // проверить последняя ли страница , если да отключить (добавть класс)
+    indexOfFirstElem += itemsOnPage;
+    createPage(figureAllItems, itemsOnPage, indexOfFirstElem);
+    pageNumber.innerHTML = +pageNumber.innerHTML + 1;
+
+    buttonNavigatorPrevious.removeAttribute("disabled");
+    buttonNavigatorPrevious.classList.add("button_navigator");
+
+    buttonNavigatorHome.removeAttribute("disabled");
+    buttonNavigatorHome.classList.add("button_navigator");
+
+    let indexOfNextPage = indexOfFirstElem + itemsOnPage;
+    if (indexOfNextPage > figureAllItems.length - itemsOnPage) {
+        buttonNavigatorNext.setAttribute("disabled", "disabled");
+        buttonNavigatorNext.classList.remove("button_navigator");
+
+        buttonNavigatorLast.setAttribute("disabled", "disabled");
+        buttonNavigatorLast.classList.remove("button_navigator");
+    }
 }
 
-function buttonNavigatorLast() {
+function NavigatorLast() {
     console.log('last');
+    
+    let indexOfLastPage = figureAllItems.length - itemsOnPage; 
+    indexOfFirstElem = indexOfLastPage;
+    createPage(figureAllItems, itemsOnPage, indexOfLastPage);
+
+    let pageNumbers = figureAllItems.length / itemsOnPage;
+    pageNumber.innerHTML = +pageNumbers;
+
+    buttonNavigatorNext.setAttribute("disabled", "disabled");
+    buttonNavigatorNext.classList.remove("button_navigator");
+
+    buttonNavigatorLast.setAttribute("disabled", "disabled");
+    buttonNavigatorLast.classList.remove("button_navigator");
+
+    buttonNavigatorPrevious.removeAttribute("disabled");
+    buttonNavigatorPrevious.classList.add("button_navigator");
+
+    buttonNavigatorHome.removeAttribute("disabled");
+    buttonNavigatorHome.classList.add("button_navigator");
 }
 
 function createFigure(item) {    

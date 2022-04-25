@@ -192,7 +192,7 @@ h2 {
     height: 52px;
     @include fontGeorgia(20px, 115%, 0.06em);
   }
-  .button_navigator_inactive {
+  [disabled] {
     border: 2px solid $color-dark-s;
   }  
   .button_navigator_active {
