@@ -79,12 +79,12 @@
                         <button class="button_secondary">Learn more</button>
                     </figure> -->
                 </div>
-                <nav class="pets-navigation">
-                    <button class="button_navigator_inactive" disabled>&lt;&lt;</button>
-                    <button class="button_navigator_inactive" disabled>&lt;</button>
-                    <button class="button_navigator_active">1</button>
-                    <button class="button_navigator">&gt;</button>
-                    <button class="button_navigator">&gt;&gt;</button>
+                <nav class="pets-navigation" id="pets-navigation">  
+                    <button class="button_navigator_inactive" id="button_navigator_left_home" disabled onclick="buttonNavigatorHome(this)">&lt;&lt;</button>
+                    <button class="button_navigator_inactive" id="button_navigator_left" disabled onclick="buttonNavigatorPrevious(this)">&lt;</button>
+                    <button class="button_navigator_active" id="pageNumber">1</button>
+                    <button class="button_navigator" id="button_navigator_right" onclick="buttonNavigatorNext(this)">&gt;</button>
+                    <button class="button_navigator" id="button_navigator_right_home" onclick="buttonNavigatorLast(this)">&gt;&gt;</button>
                 </nav>        
             </div>
         </main>

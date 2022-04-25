@@ -141,11 +141,14 @@ h2 {
   flex-wrap: wrap;
   display: flex;
   gap: $card-vertical-space 40px;
+  height: ($card-height + $card-vertical-space) * 2;
+  overflow: hidden;
   figure {
     height: $card-height;
     width: 270px;
     background-color: $color-light-s;
     border-radius: 9px;
+    margin-bottom: 30px;
     &:hover {
       background-color: $color-light-xl;
       cursor: pointer;
@@ -181,7 +184,7 @@ h2 {
   @include marginWidth();
   width: 340px;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;    
   button {
     background: $color-light-l;
     border-radius: 100px;

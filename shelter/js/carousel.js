@@ -30,7 +30,7 @@ function createButton() {
     button.innerHTML = 'Learn more';
     return button;
 }
-
+let exportCreateFigure = createFigure;
 let nonShowedItems = [...json];
 let showedItems = getThreeRandom(nonShowedItems);
 

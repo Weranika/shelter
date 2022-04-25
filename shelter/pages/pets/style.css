@@ -118,12 +118,15 @@ h2 {
   flex-wrap: wrap;
   display: flex;
   gap: 30px 40px;
+  height: 930px;
+  overflow: hidden;
 }
 .cards-container figure {
   height: 435px;
   width: 270px;
   background-color: #fafafa;
   border-radius: 9px;
+  margin-bottom: 30px;
 }
 .cards-container figure:hover {
   background-color: white;
