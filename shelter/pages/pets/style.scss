@@ -394,7 +394,7 @@ footer {
     .burger {
       display: block;
       transition: 0.5s;
-      position: absolute;
+      position: fixed;
       top: 45px;
       right: 39px;
       z-index: 3;
@@ -599,7 +599,7 @@ header {
     width: 320px;
     height: 100vh;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0px;
     right: 0px;
@@ -634,7 +634,7 @@ header {
     }
 
     .burger {
-      position: absolute;
+      position: fixed;
       top: 45px;
       right: 39px;
       transition: 0.5s;
@@ -687,7 +687,7 @@ header {
     }
 
     .burger {
-      position: absolute;
+      position: fixed;
       top: 45px;
       right: 39px;
       transition: 0.5s;
