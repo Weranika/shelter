@@ -235,6 +235,8 @@ nav.header-navigation {
   display: flex;
   justify-content: space-between;
   width: 988px;
+  gap: 0 90px;
+  overflow: hidden;
   figure {
     list-style-type: none;
     background-color: $color-light-s;
@@ -259,7 +261,7 @@ nav.header-navigation {
     img {
       border-radius: 9px 9px 0px 0px;
     }
-    .button_secondary {
+    button {
       @include button($color-light-s, $color-dark-3xl);
       border: 2px solid $color-primary;
       width: 187px;
@@ -531,6 +533,7 @@ footer {
     flex-wrap: wrap;
     overflow: hidden;
     height: $card-height;
+    gap: 0 43px;
   }
   .get-to-know {
     width: 260px;
@@ -603,15 +606,14 @@ footer {
     padding-top: 30px;
     justify-content: space-between;
     height: 60px;
-    margin-right: 53px;
     width: auto;
     margin-left: 3%;
     .burger {
       display: block;
       transition: 0.5s;   
       position: absolute;
-      top: 45px;
-      right: 39px;
+      top: 41px;
+      right: 53px;
       z-index: 3;
     }
     .line {
@@ -630,6 +632,7 @@ footer {
       .navigation {
         flex-direction: column;
         display: none;
+        margin: auto;
       }
     }
   }
@@ -875,9 +878,10 @@ footer {
 }
 /******************************************/
 .header-navigation ul.nonshow,
-.header-navigation div.nonshow, .popup-background.nonshow {
+.header-navigation div.nonshow, .popup-background.nonshow, #popap.nonshow {
   display: none;
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -904,7 +908,7 @@ header {
   .change {
     background-color: $color-dark-3xl;
     width: 320px;
-    height: 823px;
+    height: 100vh;
     position: absolute;
     z-index: 2;
     top: 0px;
@@ -914,10 +918,12 @@ header {
     animation-name: slidein;
     overflow: hidden;
     white-space: nowrap;
+    display: flex;
+    flex-direction: column;
     .navigation-header {
       display: flex;
       justify-content: space-between;
-      margin: 31px 54px 158px 10px;      
+      margin: 31px 0 0 10px;
       a {
         color: $color-primary;
         &:hover {
@@ -993,8 +999,15 @@ $button-width: 52px;
 $popap-content-width: 900px;
 $popap-content-height: 500px;
 
-#popap {
-  display: none;
+#popap {  
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-background {
@@ -1006,33 +1019,41 @@ $popap-content-height: 500px;
   height: 100%;
 }
 .popap-background {
-  background: rgba(41, 41, 41, 0.6);
+  background: rgba(41, 41, 41, 0.6); 
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  right: 0;
+  top: 0;
+  z-index: 0;  
+  &:hover {    
+    cursor: pointer;
+    .popap-body button {
+      background: $color-primary;
+    }
+  }
+}
+.close-popap {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: rgba(41, 41, 41, 0.0);
+  float: right;
+  margin-right: 3px;
+  padding-top: 5px;
+  z-index: 2;
+  position: relative;
+  &:hover {
+    background: $color-primary;
+  }
 }
 .popap-body {
   box-sizing: border-box;
   width: $popap-body-width;
   height: $popap-body-height;  
-  margin: 0 0 $button-width 45px;
-  button {
-    width: 52px;
-    height: 52px;
-    border: 2px solid #F1CDB3;
-    box-sizing: border-box;
-    border-radius: 100px;
-    background: rgba(41, 41, 41, 0.0);
-    float: right;
-    margin-right: 3px;
-    padding-top: 5px;
-    &:hover {
-      background: $color-primary;
-    }
-  }
+  margin: 0 0 $button-width 45px;  
   .popap-content {
     width: $popap-content-width;
     height: $popap-content-height;
@@ -1040,6 +1061,8 @@ $popap-content-height: 500px;
     background: $color-light-s;
     border-radius: 9px;
     display: flex;
+    z-index: 2;
+    position: relative;
     img {
       border-radius: 9px 0px 0px 9px;
       width: 500px;
@@ -1088,7 +1111,7 @@ $popap-content-height: 500px;
     }
     .popap-content {
       width: 630px;
-      height: 350px;
+      height: 350px;      
       img {
         width: 350px;
         height: 350px;
@@ -1098,7 +1121,7 @@ $popap-content-height: 500px;
         height: 303px;
         margin: 10px 9px 37px 11px;
         h4, p {
-          padding-bottom: 20px;
+          padding-bottom: 16px;
         }
         p {
           font-size: 13px;
@@ -1115,21 +1138,22 @@ $popap-content-height: 500px;
 @media (max-width: 767px) {
   .popap-body {
     width: 271px;
-    height: 393px;
+    height: auto;
     margin: 0 0 52px 31px;
     button {
       margin-right: 0;
     }
     .popap-content {
       width: 240px;
-      height: 341px;
+      min-height: 341px;
+      height: 100%;
       img {
         display: none;
       }
       .popap-pets-content {
         width: 220px;
-        height: 321px;
-        margin: 10px 9px 37px 11px;
+        height: auto;
+        margin: 10px 9px 11px;
         h3, h4 {
           text-align: center;
         }      
@@ -1147,4 +1171,8 @@ $popap-content-height: 500px;
       }
     }
   }
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

@@ -72,26 +72,11 @@
                 <div class="pets-content">
                     <h3>Our friends who <br>are looking for a house</h3>
                     <div class="slider">
-                        <button class="button_arrow left"><img src="../../assets/icons/button_arrow_left.png"
+                        <button class="button_arrow left" onclick="carouselButton(this)"><img src="../../assets/icons/button_arrow_left.png"
                                 alt="arrow"></button>
-                        <div class="cards">
-                            <figure>
-                                <img src="../../assets/images/pets/pets-katrine.png" alt="Katrine">
-                                <figcaption>Katrine</figcaption>
-                                <button class="button_secondary">Learn more</button>
-                            </figure>
-                            <figure>
-                                <img src="../../assets/images/pets/pets-jennifer.png" alt="Jennifer">
-                                <figcaption>Jennifer</figcaption>
-                                <button class="button_secondary">Learn more</button>
-                            </figure>
-                            <figure>
-                                <img src="../../assets/images/pets/pets-woody.png" alt="Woody">
-                                <figcaption>Woody</figcaption>
-                                <button class="button_secondary">Learn more</button>
-                            </figure>
+                        <div class="cards" id="cards">                           
                         </div>
-                        <button class="button_arrow right"><img src="../../assets/icons/button_arrow_right.png"
+                        <button class="button_arrow right" onclick="carouselButton(this)"><img src="../../assets/icons/button_arrow_right.png"
                                 alt="arrow"></button>
                     </div>
                     <button class="get-to-know"><a href="../pets/index.html">Get to know the rest</a></button>
@@ -202,33 +187,33 @@
             </div>
         </footer>
         <div class="popup-background nonshow" id="popup-background"></div>
-        <div id="popap" class="popap">
-            <div class="popap-background">
-                <div class="popap-body">
-                    <button class="close-popap" type="button"><img src="../../assets/icons/close.png" alt="x"></button>
-                    <div class="popap-content">
-                        <img src="../../assets/images/pets/pets-jennifer.png" alt="charly">
-                        <div class="popap-pets-content">
-                            <h3>Jennifer</h3>
-                            <h4>Dog - Labrador</h4>
-                            <p>Jennifer is a sweet 2 months old Labrador that is patiently
-                                waiting to find a new forever home. This girl really enjoys
-                                being able to go outside to run and play, but won't hesitate to
-                                play up a storm in the house if she has all of her
-                                favorite toys.</p>
-                            <ul class="pets-discriptions">
-                                <li><span><b>Age:</b> 2 months</span></li>
-                                <li><span><b>Inoculations:</b> none</span></li>
-                                <li><span><b>Diseases:</b> none</span></li>
-                                <li><span><b>Parasites:</b> none</span></li>
-                            </ul>
-                        </div>
+        <div id="popap" class="popap nonshow">
+            <div class="popap-body">
+                <button class="close-popap" type="button" id="close-popap"><img src="../../assets/icons/close.png" alt="x"></button>
+                <div class="popap-content" id="popap-content">
+                    <img src="../../assets/images/pets/pets-jennifer.png" alt="charly">
+                    <div class="popap-pets-content">
+                        <h3>Jennifer</h3>
+                        <h4><span class="type">Dog</span> - <span class="breed"> - Labrador</span></h4>
+                        <p>Jennifer is a sweet 2 months old Labrador that is patiently
+                            waiting to find a new forever home. This girl really enjoys
+                            being able to go outside to run and play, but won't hesitate to
+                            play up a storm in the house if she has all of her
+                            favorite toys.</p>
+                        <ul class="pets-discriptions">
+                            <li><span><b>Age:</b> <span class="age">2 months</span></span></li>
+                            <li><span><b>Inoculations:</b> <span class="inoculations">none</span></span></li>
+                            <li><span><b>Diseases:</b> <span class="diseases">none</span></span></li>
+                            <li><span><b>Parasites:</b> <span class="parasites">none</span></span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="popap-background" id="popap-background"></div>
         </div>
     </div>    
     <script src="../../js/json.js"></script>
     <script src="../../js/burger.js"></script>
+    <script src="../../js/carousel.js"></script>    
 </body>
 </html>

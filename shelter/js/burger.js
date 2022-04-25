@@ -2,8 +2,7 @@ function burgerNavigation(elem) {
     let navigationBar = document.getElementById("navigation-bar");
     let popup = document.getElementById("popup-background");
     let navigation = document.getElementById('navigation');    
-
-    //navigationBar.classList.toggle("change"); 
+    document.querySelector('body').classList.toggle("stop-scrolling");    
     if (navigationBar.classList.contains("change")) {
         navigationBar.classList.remove("change");
         navigationBar.classList.add("slideout");
@@ -26,17 +25,17 @@ function burgerNavigation(elem) {
 document.getElementById("popup-background").addEventListener("click", handler1);
 function handler1() {       
     let navigation = document.getElementById('navigation');
-
     document.getElementById("navigation-bar").classList.remove("change");
     document.getElementById("navigation-bar").classList.add("slideout");
     document.getElementById("popup-background").classList.toggle("nonshow");
     document.getElementById("burger").classList.toggle("rotate");    
-    document.getElementById("logo").classList.toggle("nonshow");
+    document.getElementById("logo").classList.toggle("nonshow");    
     if (navigation.style.display == 'block') {
         navigation.style.display = 'none';
     } else {
         navigation.style.display = 'block';
     }
+    document.querySelector('body').classList.toggle("stop-scrolling");
 }
 
 document.getElementById("ourPets").addEventListener("click", handler2);
@@ -62,4 +61,5 @@ function handler2() {
     } else {
         navigation.style.display = 'block';
     }
+    document.querySelector('body').classList.toggle("stop-scrolling");
 }
