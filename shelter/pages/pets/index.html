@@ -37,8 +37,8 @@
         <main>
             <h2>Our friends who <br>are looking for a house</h2>
             <div class="pets-conteiner">
-                <div class="cards-container">
-                    <figure class="card">
+                <div class="cards-container" id="cards">
+                    <!-- <figure class="card">
                         <img src="../../assets/images/pets/pets-katrine.png" alt="katrine">
                         <figcaption>Katrine</figcaption>
                         <button class="button_secondary">Learn more</button>
@@ -77,7 +77,7 @@
                         <img src="../../assets/images/pets/pets-freddie.png" alt="freddie">
                         <figcaption>Freddie</figcaption>
                         <button class="button_secondary">Learn more</button>
-                    </figure>
+                    </figure> -->
                 </div>
                 <nav class="pets-navigation">
                     <button class="button_navigator_inactive" disabled>&lt;&lt;</button>
@@ -85,8 +85,7 @@
                     <button class="button_navigator_active">1</button>
                     <button class="button_navigator">&gt;</button>
                     <button class="button_navigator">&gt;&gt;</button>
-                </nav>
-        
+                </nav>        
             </div>
         </main>
         <footer>
@@ -129,11 +128,35 @@
                 <img class="footer-dog" src="../../assets/images/footer-puppy.png" alt="footer-puppy">
             </div>
         </footer>
+        <div class="popup-background nonshow" id="popup-background"></div>
+        <div id="popap" class="popap nonshow">
+            <div class="popap-body">
+                <button class="close-popap" type="button" id="close-popap"><img src="../../assets/icons/close.png"
+                        alt="x"></button>
+                <div class="popap-content" id="popap-content">
+                    <img src="../../assets/images/pets/pets-jennifer.png" alt="charly">
+                    <div class="popap-pets-content">
+                        <h3>Jennifer</h3>
+                        <h4><span class="type">Dog</span> - <span class="breed"> - Labrador</span></h4>
+                        <p>Jennifer is a sweet 2 months old Labrador that is patiently
+                            waiting to find a new forever home. This girl really enjoys
+                            being able to go outside to run and play, but won't hesitate to
+                            play up a storm in the house if she has all of her
+                            favorite toys.</p>
+                        <ul class="pets-discriptions">
+                            <li><span><b>Age:</b> <span class="age">2 months</span></span></li>
+                            <li><span><b>Inoculations:</b> <span class="inoculations">none</span></span></li>
+                            <li><span><b>Diseases:</b> <span class="diseases">none</span></span></li>
+                            <li><span><b>Parasites:</b> <span class="parasites">none</span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popap-background" id="popap-background"></div>
+        </div>
     </div> 
-    
-    <div class="popup-background nonshow" id="popup-background"></div>
     <script src="../../js/json.js"></script>
-    <script src="../../js/burger.js"></script>
-    <script src="../../js/carousel.js"></script>
+    <script src="../../js/burger.js"></script>    
+    <script src="../../js/pagination.js"></script>
 </body>
 </html>

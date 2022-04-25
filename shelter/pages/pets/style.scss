@@ -141,7 +141,7 @@ h2 {
   flex-wrap: wrap;
   display: flex;
   gap: $card-vertical-space 40px;
-  .card {
+  figure {
     height: $card-height;
     width: 270px;
     background-color: $color-light-s;
@@ -164,7 +164,7 @@ h2 {
     img {
       border-radius: 9px 9px 0px 0px;
     }
-    .button_secondary {
+    button {
       @include button($color-light-s, $color-dark-3xl);
       border: 2px solid $color-primary;
       width: 187px;
@@ -563,10 +563,10 @@ footer {
   }
 }
 /*********************************************************/
-/******************************************/
+/*******************burger**************************/
 .header-navigation ul.nonshow,
 .header-navigation div.nonshow,
-.popup-background.nonshow {
+.popup-background.nonshow, #popap.nonshow {
   display: none;
 }
 
@@ -593,7 +593,6 @@ footer {
     width: 0;
   }
 }
-
 header {
   .change {    
     background-color: $color-dark-3xl;
@@ -703,14 +702,12 @@ header {
       }
     }
   }
-
   .rotate {
     transform: rotate(90deg);
   }
 }
-#popap {
-  display: none;
-}
+
+/*************popup burger*************/
 .popup-background {
   background: rgba(41, 41, 41, 0.6);
   position: fixed;
@@ -719,7 +716,213 @@ header {
   width: 100%;
   height: 100%;
 }
+/*************no-scroll*************/
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+/*****************************popap***************************/
+/*************************************************************/
+$popap-body-width: 952px;
+$popap-body-height: 552px;
+$button-width: 52px;
+$popap-content-width: 900px;
+$popap-content-height: 500px;
+
+#popap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popap-background {
+  background: rgba(41, 41, 41, 0.6);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 0;
+
+  &:hover {
+    cursor: pointer;
+
+    .popap-body button {
+      background: $color-primary;
+    }
+  }
+}
+
+.close-popap {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: rgba(41, 41, 41, 0.0);
+  float: right;
+  margin-right: 3px;
+  padding-top: 5px;
+  z-index: 2;
+  position: relative;
+
+  &:hover {
+    background: $color-primary;
+  }
+}
+
+.popap-body {
+  box-sizing: border-box;
+  width: $popap-body-width;
+  height: $popap-body-height;
+  margin: 0 0 $button-width 45px;
+
+  .popap-content {
+    width: $popap-content-width;
+    height: $popap-content-height;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: $color-light-s;
+    border-radius: 9px;
+    display: flex;
+    z-index: 2;
+    position: relative;
+
+    img {
+      border-radius: 9px 0px 0px 9px;
+      width: 500px;
+      height: 500px;
+    }
+
+    .popap-pets-content {
+      width: 351px;
+      height: 362px;
+      margin: 50px 20px 0 29px;
+
+      h3 {
+        @include fontGeorgia(35px, 130%, 0.06em);
+        padding-bottom: 10px;
+      }
+
+      h4 {
+        @include fontGeorgia(20px, 115%, 0.06em);
+        padding-bottom: 40px;
+      }
+
+      p {
+        @include fontGeorgia(15px, 110%, 0.06em);
+        padding-bottom: 40px;
+      }
+
+      ul {
+        list-style-type: disc;
+        color: $color-primary;
+        margin-left: 16px;
+
+        li {
+          padding-bottom: 10px;
+          letter-spacing: 0.06em;
+        }
+
+        span {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+/******popap 768px************/
+@media (min-width: 768px) and (max-width: 1279px) {
+  .popap-body {
+    width: 682px;
+    height: 402px;
+    margin: 0 0 $button-width 52px;
+
+    button {
+      margin-right: 9px;
+    }
+
+    .popap-content {
+      width: 630px;
+      height: 350px;
+
+      img {
+        width: 350px;
+        height: 350px;
+      }
+
+      .popap-pets-content {
+        width: 260px;
+        height: 303px;
+        margin: 10px 9px 37px 11px;
+
+        h4,
+        p {
+          padding-bottom: 16px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        ul li {
+          padding-bottom: 5px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+/******popap 320px************/
+@media (max-width: 767px) {
+  .popap-body {
+    width: 271px;
+    height: auto;
+    margin: 0 0 52px 31px;
+
+    button {
+      margin-right: 0;
+    }
+
+    .popap-content {
+      width: 240px;
+      min-height: 341px;
+      height: 100%;
+
+      img {
+        display: none;
+      }
+
+      .popap-pets-content {
+        width: 220px;
+        height: auto;
+        margin: 10px 9px 11px;
+
+        h3,
+        h4 {
+          text-align: center;
+        }
+
+        h4 {
+          padding-bottom: 20px;
+        }
+
+        p {
+          padding-bottom: 24px;
+          font-size: 13px;
+        }
+
+        ul li {
+          padding-bottom: 5px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }

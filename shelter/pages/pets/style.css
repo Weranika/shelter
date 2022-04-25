@@ -119,33 +119,33 @@ h2 {
   display: flex;
   gap: 30px 40px;
 }
-.cards-container .card {
+.cards-container figure {
   height: 435px;
   width: 270px;
   background-color: #fafafa;
   border-radius: 9px;
 }
-.cards-container .card:hover {
+.cards-container figure:hover {
   background-color: white;
   cursor: pointer;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
-.cards-container .card:hover button {
+.cards-container figure:hover button {
   background-color: #fddcc4;
   border: none;
   cursor: pointer;
 }
-.cards-container .card figcaption {
+.cards-container figure figcaption {
   color: #545454;
   margin: 26px 0 30px 3px;
   font: 400 20px "Georgia";
   line-height: 23px;
   letter-spacing: 0.06em;
 }
-.cards-container .card img {
+.cards-container figure img {
   border-radius: 9px 9px 0px 0px;
 }
-.cards-container .card .button_secondary {
+.cards-container figure button {
   color: #292929;
   align-items: center;
   border-radius: 100px;
@@ -568,10 +568,10 @@ footer {
   }
 }
 /*********************************************************/
-/******************************************/
+/*******************burger**************************/
 .header-navigation ul.nonshow,
 .header-navigation div.nonshow,
-.popup-background.nonshow {
+.popup-background.nonshow, #popap.nonshow {
   display: none;
 }
 
@@ -698,10 +698,7 @@ header .rotate {
   transform: rotate(90deg);
 }
 
-#popap {
-  display: none;
-}
-
+/*************popup burger*************/
 .popup-background {
   background: rgba(41, 41, 41, 0.6);
   position: fixed;
@@ -711,9 +708,188 @@ header .rotate {
   height: 100%;
 }
 
+/*************no-scroll*************/
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+
+/*****************************popap***************************/
+/*************************************************************/
+#popap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popap-background {
+  background: rgba(41, 41, 41, 0.6);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.popap-background:hover {
+  cursor: pointer;
+}
+.popap-background:hover .popap-body button {
+  background: #f1cdb3;
+}
+
+.close-popap {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: rgba(41, 41, 41, 0);
+  float: right;
+  margin-right: 3px;
+  padding-top: 5px;
+  z-index: 2;
+  position: relative;
+}
+.close-popap:hover {
+  background: #f1cdb3;
+}
+
+.popap-body {
+  box-sizing: border-box;
+  width: 952px;
+  height: 552px;
+  margin: 0 0 52px 45px;
+}
+.popap-body .popap-content {
+  width: 900px;
+  height: 500px;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background: #fafafa;
+  border-radius: 9px;
+  display: flex;
+  z-index: 2;
+  position: relative;
+}
+.popap-body .popap-content img {
+  border-radius: 9px 0px 0px 9px;
+  width: 500px;
+  height: 500px;
+}
+.popap-body .popap-content .popap-pets-content {
+  width: 351px;
+  height: 362px;
+  margin: 50px 20px 0 29px;
+}
+.popap-body .popap-content .popap-pets-content h3 {
+  font: 400 35px "Georgia";
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  padding-bottom: 10px;
+}
+.popap-body .popap-content .popap-pets-content h4 {
+  font: 400 20px "Georgia";
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  padding-bottom: 40px;
+}
+.popap-body .popap-content .popap-pets-content p {
+  font: 400 15px "Georgia";
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  padding-bottom: 40px;
+}
+.popap-body .popap-content .popap-pets-content ul {
+  list-style-type: disc;
+  color: #f1cdb3;
+  margin-left: 16px;
+}
+.popap-body .popap-content .popap-pets-content ul li {
+  padding-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+.popap-body .popap-content .popap-pets-content ul span {
+  color: #000000;
+}
+
+/******popap 768px************/
+@media (min-width: 768px) and (max-width: 1279px) {
+  .popap-body {
+    width: 682px;
+    height: 402px;
+    margin: 0 0 52px 52px;
+  }
+  .popap-body button {
+    margin-right: 9px;
+  }
+  .popap-body .popap-content {
+    width: 630px;
+    height: 350px;
+  }
+  .popap-body .popap-content img {
+    width: 350px;
+    height: 350px;
+  }
+  .popap-body .popap-content .popap-pets-content {
+    width: 260px;
+    height: 303px;
+    margin: 10px 9px 37px 11px;
+  }
+  .popap-body .popap-content .popap-pets-content h4,
+.popap-body .popap-content .popap-pets-content p {
+    padding-bottom: 16px;
+  }
+  .popap-body .popap-content .popap-pets-content p {
+    font-size: 13px;
+  }
+  .popap-body .popap-content .popap-pets-content ul li {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+}
+/******popap 320px************/
+@media (max-width: 767px) {
+  .popap-body {
+    width: 271px;
+    height: auto;
+    margin: 0 0 52px 31px;
+  }
+  .popap-body button {
+    margin-right: 0;
+  }
+  .popap-body .popap-content {
+    width: 240px;
+    min-height: 341px;
+    height: 100%;
+  }
+  .popap-body .popap-content img {
+    display: none;
+  }
+  .popap-body .popap-content .popap-pets-content {
+    width: 220px;
+    height: auto;
+    margin: 10px 9px 11px;
+  }
+  .popap-body .popap-content .popap-pets-content h3,
+.popap-body .popap-content .popap-pets-content h4 {
+    text-align: center;
+  }
+  .popap-body .popap-content .popap-pets-content h4 {
+    padding-bottom: 20px;
+  }
+  .popap-body .popap-content .popap-pets-content p {
+    padding-bottom: 24px;
+    font-size: 13px;
+  }
+  .popap-body .popap-content .popap-pets-content ul li {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
