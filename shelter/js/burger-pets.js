@@ -40,10 +40,14 @@ function handler1() {
     document.querySelector('body').classList.toggle("stop-scrolling");
 }
 
-document.getElementById("ourPets").addEventListener("click", handler2);
-document.getElementById("helpNav").addEventListener("click", handler2);
-document.getElementById("contactsNav").addEventListener("click", handler2);
-document.getElementById("aboutTheScelter").addEventListener("click", handler2);
+const windowInnerWidth = document.documentElement.clientWidth;
+if (windowInnerWidth < 768) {
+    document.getElementById("ourPets").addEventListener("click", handler2);
+    document.getElementById("helpNav").addEventListener("click", handler2);
+    document.getElementById("contactsNav").addEventListener("click", handler2);
+    document.getElementById("aboutTheScelter").addEventListener("click", handler2);
+}    
+
 function handler2() {
     let navigationBar = document.getElementById("navigation-bar");    
     let navigation = document.getElementById('navigation');
