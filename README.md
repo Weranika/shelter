@@ -1,2 +1,1 @@
-# weranika-JSFE2022Q1
-Private repository for @weranika
+# накаси выкуси
